@@ -1,1 +1,1 @@
-# veileder-dcat-ap-no
+# veileder-modelldcat-ap-no
