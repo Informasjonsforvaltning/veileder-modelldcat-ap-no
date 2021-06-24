@@ -1,0 +1,56 @@
+include::locale/attributes-nb.adoc[]
+= Veileder for beskrivelse av informasjonsmodeller
+:description:
+:doctype: book
+:docinfo:
+:icons: font
+:toc: left
+:toclevels: 3
+:sectanchors:
+:title-logo-image: images/image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
+
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+
+include::./shared/download.adoc[]
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+
+*Status*: [yellow-background]#under utarbeidelse# +
+*Versjon*: [yellow-background]#forberedelse til# 1.0 +
+*Publisert*: [yellow-background]#under utarbeidelse# +
+*Oppdatert*: 2021-06-24 +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-modelldcat-ap-no/ +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/
+
+
+
+// :leveloffset: +1
+
+// Innhold her.
+
+include::Innledning.adoc[]
+
+include::KortOm.adoc[]
+
+include::Generelt.adoc[]
+
+include::Informasjonsmodell.adoc[]
+
+include::Modellinnhold.adoc[]
+
+include::Modellkatalog.adoc[]
+
+include::Sammenheng.adoc[]
+
+include::Referanser.adoc[]
+
+include::Hjelpemidler.adoc[]
+
+include::Akronymer.adoc[]
+
+include::Vedlegg.adoc[]
+
+
+include::./shared/stats.adoc[]
