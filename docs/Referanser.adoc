@@ -1,3 +1,15 @@
-== Referanser
+== Referanser [[Referanser]]
 
-<tekst kommer>
+DCAT-AP-NO: https://data.norge.no/specification/dcat-ap-no/[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO)]
+
+Github-repository for ModellDCAT-AP-NO, https://github.com/Informasjonsforvaltning/modelldcat-ap-no
+
+ModellDCAT-AP-NO: https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)]
+
+https://www.w3.org/TR/turtle/[RDF Turtle]
+
+https://www.w3.org/RDF/[Resource Description Framework (RDF)]
+
+SKOS-AP-NO: https://data.norge.no/specification/skos-ap-no-begrep/[Forvaltningsstandard for tilgjengeliggjøring av begrepsbeskrivelser basert på SKOS]
+
+https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[Standard for pekere til offentlige ressurser på nett]
