@@ -460,7 +460,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#om-lisens">Om bruk av egenskap «lisens» (<code>dct:license</code>)</a></li>
 </ul>
 </li>
-<li><a href="#_informasjonsmodell">Informasjonsmodell</a></li>
+<li><a href="#Informasjonsmodell">Informasjonsmodell</a>
+<ul class="sectlevel2">
+<li><a href="#hva-er-infomodell">Hva er en informasjonsmodell?</a></li>
+<li><a href="#hvordan-beskrive-infomodell">Hvordan beskriver du en informasjonsmodell?</a></li>
+<li><a href="#eks-infomodell-RDF">Eksempel på en informasjonsmodell (i RDF Turtle)</a></li>
+<li><a href="#tilgjengeliggjør-infomodell">Hva gjør du når du skal gjøre din informasjonsmodell tilgjengelig?</a></li>
+</ul>
+</li>
 <li><a href="#_modellinnhold">Modellinnhold</a></li>
 <li><a href="#_modellkatalog">Modellkatalog</a></li>
 <li><a href="#_informasjonsmodell_og_relasjoner_til_datasett_datatjenester_og_begreper">Informasjonsmodell og relasjoner til datasett, datatjenester og begreper</a></li>
@@ -721,10 +728,74 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_informasjonsmodell"><a class="anchor" href="#_informasjonsmodell"></a>Informasjonsmodell</h2>
+<h2 id="Informasjonsmodell"><a class="anchor" href="#Informasjonsmodell"></a>Informasjonsmodell</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="hva-er-infomodell"><a class="anchor" href="#hva-er-infomodell"></a>Hva er en informasjonsmodell?</h3>
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p>Med informasjonsmodell (<code>modelldcatno:InformationModel</code>) mener vi en formell beskrivelse av informasjonen en virksomhet trenger å motta eller selv produsere for å utføre sitt daglige virke. Vi legger til grunn en vid tolkning av begrepet informasjonsmodell. Den omfatter modeller på ulike abstraksjonsnivåer (som konseptuelle, logiske og fysiske modeller) og modeller som beskriver ulike aspekter ved informasjon (som felles- og anvendelsesmodeller).</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For ModellDCAT-AP-NO er det utarbeidet et <a href="https://data.norge.no/vocabulary/modelldcatno/modelldcatno.ttl">vokabular for klassifisering av modeller</a>.
+Dette er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Konseptuell modell</strong> er en form for kvalitativ modell som beskriver de viktigste konseptene innenfor et fagdomene og sammenhengen mellom disse.</p>
+</li>
+<li>
+<p><strong>Logisk modell</strong> beskriver hvilke typer informasjon som inngår i en avgrenset sammenheng og hvordan de er logisk relatert, uavhengig av teknologi.</p>
+</li>
+<li>
+<p><strong>Fysisk modell</strong> er en logisk modell som er utarbeidet for å beskrive datautveksling eller lagring av data for en bestemt løsning.</p>
+</li>
+<li>
+<p><strong>Fellesmodell</strong> er en informasjonsmodell til felles bruk på tvers av virksomheter, forretningsområder og/eller applikasjonssegmenter.</p>
+</li>
+<li>
+<p><strong>Anvendelsesmodell</strong> er en modell som er rettet mot et spesifikt anvendelsesområde i en avgrenset kontekst, og er sammensatt av elementer i en fellesmodell.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hvordan-beskrive-infomodell"><a class="anchor" href="#hvordan-beskrive-infomodell"></a>Hvordan beskriver du en informasjonsmodell?</h3>
+<div class="paragraph">
+<p>Kun tittel (<code>dct:title</code>) og utgiver (<code>dct:publisher</code>, se <a href="#om-utgiver-og-produsent">Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>)</a>) er obligatorisk for en informasjonsmodell. Det er med andre ord ikke påkrevd å ta med modellelementer i modellbeskrivelsen din, selv om dette er anbefalt. Hvis modellen din kun er tilgjengelig som f.eks. en bildefil, anbefales det å gjøre den tilgjengelig på en nettside og peke til denne ved bruk av dct:hasFormat.  Det er også mulig å referere til en hjemmeside hvor modellen er nærmere beskrevet ved bruk av egenskapen <code>foaf:homepage</code>.</p>
+</div>
+<div class="paragraph">
+<p>Hva som betraktes som større eller mindre endringer, er en faglig vurdering som denne veilederen ikke dekker. Når du ut fra den faglige vurderingen mener at endringene i informasjonsmodellen din er så store at det kan ha betydning for hvordan informasjonsmodellen skal forstås/brukes, bør du opprette en ny instans av <code>modelldcatno:InformationModel</code> for den nye versjonen av informasjonsmodellen din, slik at den nye versjonen også får en egen identifikator. Dette gjør at både den nye og den gamle versjonen av informasjonsmodellen din kan refereres til. Du bør også bruke egenskapen «Informasjonsmodell: erstatter» (<code>dct:replaces</code>) fra den nye versjonen til den gamle versjonen av informasjonsmodellen (ev. den motsatte egenskapen, «Informasjonsmodell: er erstattet av» (<code>dct:isReplacedBy</code>) fra den gamle til den nye versjonen av informasjonsmodellen). For mindre endringer kan du bruke egenskapene «Informasjonsmodell: versjon» (<code>owl:versionInfo</code>) og «Informasjonsmodell: versjonsnote» (<code>adms:versionNotes</code>) til å dokumentere endringene, uten at det blir opprettet en ny instans og dermed en ny identifikator.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="eks-infomodell-RDF"><a class="anchor" href="#eks-infomodell-RDF"></a>Eksempel på en informasjonsmodell (i RDF Turtle)</h3>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testMod1.ttl">eksempel 1 i RDF Turtle</a>, som er en informasjonsmodell uten modellelementer, men med henvisning til hvor modellen finnes. Eksemplet viser også bruk av alle egenskapene (dvs. ikke bare obligatoriske).</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testMod2.ttl">eksempel 2 i RDF Turtle</a>, som er en informasjonsmodell med et modellelement. Eksemplet viser bruk av kun obligatoriske egenskaper.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tilgjengeliggjør-infomodell"><a class="anchor" href="#tilgjengeliggjør-infomodell"></a>Hva gjør du når du skal gjøre din informasjonsmodell tilgjengelig?</h3>
+<div class="paragraph">
+<p>To tilfeller:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uten modellelementer, men med lenke til hjemmeside der selve modellen finnes, se eksempel 1 ovenfor.</p>
+</li>
+<li>
+<p>Med modellelementer, slik at hele modellen blir tilgjengeliggjort for automatisk høsting til modellkatalogen, se eksempel 2 ovenfor.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -798,7 +869,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-24 10:26:13 UTC
+Sist oppdatert 2021-06-24 10:40:26 UTC
 </div>
 </div>
 </body>
