@@ -469,7 +469,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_modellinnhold">Modellinnhold</a></li>
-<li><a href="#_modellkatalog">Modellkatalog</a></li>
+<li><a href="#Modellkatalog">Modellkatalog</a>
+<ul class="sectlevel2">
+<li><a href="#_hva_bruker_du_en_modellkatalog_til">Hva bruker du en modellkatalog til?</a></li>
+<li><a href="#_hvordan_beskriver_du_en_modellkatalog">Hvordan beskriver du en modellkatalog?</a></li>
+<li><a href="#_eksempel_på_en_modellkatalog_i_rdf_turtle">Eksempel på en modellkatalog (i RDF Turtle)</a></li>
+<li><a href="#_hva_gjør_du_når_du_skal_publisere_modellkatalogen_din_i_felles_datakatalog">Hva gjør du når du skal publisere modellkatalogen din i Felles datakatalog?</a></li>
+</ul>
+</li>
 <li><a href="#Sammenheng">Informasjonsmodell og relasjoner til datasett, datatjenester og begreper</a></li>
 <li><a href="#Referanser">Referanser</a></li>
 <li><a href="#_hjelpemidler">Hjelpemidler</a></li>
@@ -863,10 +870,60 @@ Dette er:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_modellkatalog"><a class="anchor" href="#_modellkatalog"></a>Modellkatalog</h2>
+<h2 id="Modellkatalog"><a class="anchor" href="#Modellkatalog"></a>Modellkatalog</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_hva_bruker_du_en_modellkatalog_til"><a class="anchor" href="#_hva_bruker_du_en_modellkatalog_til"></a>Hva bruker du en modellkatalog til?</h3>
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p>Informasjonsmodeller fra en eller flere virksomheter samles i en modellkatalog. En modellkatalog kan ses som et omslag til eller innbinding av modellene. En modellkatalog skal ha én utgiver, og en og samme virksomhet kan være utgiver av flere modellkataloger.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hvordan_beskriver_du_en_modellkatalog"><a class="anchor" href="#_hvordan_beskriver_du_en_modellkatalog"></a>Hvordan beskriver du en modellkatalog?</h3>
+<div class="paragraph">
+<p>Som minimum skal følgende egenskaper ha verdier:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>beskrivelse (<code>dct:description</code>): En kort og presis beskrivelse av modellkatalogen skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.</p>
+</li>
+<li>
+<p>identifikator (<code>dct:identifier</code>): Obligatorisk (se <a href="#Informasjonsmodell">Informassjonsmodell</a>).</p>
+</li>
+<li>
+<p>tittel (<code>dct:title</code>): Kortfattet om katalogen. Angi, uten å liste, hvilke modeller den omfatter, f.eks. «Informasjonsmodellene til Digitaliseringsdirektoratet». Bør gjentas når tittelen finnes i flere ulike språk/målformer.</p>
+</li>
+<li>
+<p>modell (<code>modelldcatno:model</code>): Referanser til en eller flere informasjonsmodeller som er inkludert i modellkatalogen.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kommentar: I <a href="https://data.norge.no/specification/modelldcat-ap-no/#Forenklet-modell">UML-diagrammet</a> står det at <code>dct:hasPart</code> er obligatorisk mens <code>modelldcatno:model</code> er anbefalt. <code>dcat:Resource</code> som <code>dct:hasPart</code> peker på er en abstrakt klasse og skal erstattes med instanser av subklassen <code>modelldcatno:InformationModel</code> eller <code>dcat:Catalog</code>. Bortsett fra tilfeller der man beskriver en modellkatalog bestående av andre modellkataloger, skal en modellkatalog ha minst én informasjonsmodell.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>utgiver (<code>dct:publisher</code>): Se <a href="#om-utgiver-og-produsent">Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>) </a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eksempel_på_en_modellkatalog_i_rdf_turtle"><a class="anchor" href="#_eksempel_på_en_modellkatalog_i_rdf_turtle"></a>Eksempel på en modellkatalog (i RDF Turtle)</h3>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testModCat1.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hva_gjør_du_når_du_skal_publisere_modellkatalogen_din_i_felles_datakatalog"><a class="anchor" href="#_hva_gjør_du_når_du_skal_publisere_modellkatalogen_din_i_felles_datakatalog"></a>Hva gjør du når du skal publisere modellkatalogen din i Felles datakatalog?</h3>
+<div class="paragraph">
+<p>Når du skal publisere katalogen din i Felles datakatalog, må modellene mappes iht. ModellDCAT-AP-NO til et format som kan høstes. Pr. i dag støtter Felles datakatalog følgende RDF-serialiseringer: RDF/XML, Turtle og JSON-LD.</p>
+</div>
+<div class="paragraph">
+<p>Modellkatalogen må da legges ut som en nettressurs, f.eks. i Github. URIen til nettressursen registreres i Felles datakatalog, og katalogen høstes så automatisk.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1160,7 +1217,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-24 13:50:36 UTC
+Sist oppdatert 2021-06-24 14:11:36 UTC
 </div>
 </div>
 </body>
