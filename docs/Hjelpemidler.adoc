@@ -1,3 +1,9 @@
 == Hjelpemidler
 
-<tekst kommer>
+Bibliotek for å mappe en modelldcatno-modell til RDF, https://pypi.org/project/modelldcatnotordf/[Modelldcatnotordf].  Kildekode: https://github.com/Informasjonsforvaltning/modelldcatnotordf[https://github.com/Informasjonsforvaltning/modelldcatnotordf].
+
+Valideringsregler (shacl), https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/shacl/modelldcat-ap-no_v1_SHACL-shapes.ttl[https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/shacl/modelldcat-ap-no_v1_SHACL-shapes.ttl]
+
+Validator: https://data.norge.no/validator[https://data.norge.no/validator]
+
+IDLab Turtle Validator, http://ttl.summerofcode.be/[http://ttl.summerofcode.be]
