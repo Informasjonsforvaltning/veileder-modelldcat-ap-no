@@ -1,3 +1,37 @@
-== Informasjonsmodell og relasjoner til datasett, datatjenester og begreper
+== Informasjonsmodell og relasjoner til datasett, datatjenester og begreper [[Sammenheng]]
 
-<tekst kommer>
+Figuren nedenfor viser sammenhengen mellom informasjonsmodell, datasett, API (datatjeneste) og begreper:
+
+[yellow-background]#<@@@ sett inn figuren her>#
+
+[cols="20,80"]
+|===
+|*Nummerering*|*ModellDCAT-AP-NO*
+|1|Informasjonsmodell (`dct:InformationModel`)
+|2|Datasett (`dcat:Dataset`)
+|3|Datatjeneste (`dcat:DataService`)
+|4|Begrep (`skos:Concept`)
+|5|i samsvar med (`dct:conformsTo`)
+|6|i samsvar med (`dct:conformsTo`)
+|7|begrep (`dct:subject`)
+|===
+
+Som vi har sett, kan vi referere fra informasjonsmodeller, modellelementer, egenskaper eller kodeelementer til begreper ved bruk av egenskapen begrep (`dct:subject`). Se beskrivelser og eksempler under <<Informasjonsmodell, Informasjonsmodell>> og <<Begrepsreferanser, Begrepsreferanser>>.
+
+Når det gjelder et datasett eller datatjeneste, refererer man fra disse til en informasjonsmodell. I ModellDCAT-AP-NO er klassen Informasjonsmodell subklasse av `dct:Standard`. Ved å bruke egenskapen `dct:conformsTo`, kan et datasett eller en datatjeneste referere til en informasjonsmodell.
+
+Eksempler i RDF Turtle:
+
+Datasett til informasjonsmodell:
+
+----
+<https://examples.com/infomoc/exdataset> a dcat:Dataset ;
+   dct:conformsTo <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod1> .
+----
+
+Datatjeneste til informasjonsmodell:
+
+----
+<https://examples.com/infomoc/exdataservice> a dcat:Dataservice ;
+   dct:conformsTo <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod2> .
+----
