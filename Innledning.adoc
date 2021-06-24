@@ -6,7 +6,7 @@ Denne veilederen skal gi en hjelp til virksomhetene i offentlig forvaltning til 
 
 Ulike virksomheter bruker ofte ulike modelleringsspråk og -verktøyer. Selv om noen etater forholder seg til de samme modelleringsspråkene og -verktøyene, kan bruken av disse og hvilke versjoner man anvender variere. Hensikten med ModellDCAT-AP-NO er å kunne beskrive virksomhetenes ulike informasjonsmodeller på en ensartet måte. Gjennom en lik tilnærming, er det enklere å finne, forstå, sammenligne og gjenbruke informasjonsmodeller i offentlig sektor.
 
-Det er ikke et mål for denne veilederen å beskrive alle felter i ModellDCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i spesifikasjonen for informasjonsmodeller, se https://data.norge.no/specification/modelldcat-ap-no/[Modell]https://data.norge.no/specification/modelldcat-ap-no/[DCAT-AP-NO]https://data.norge.no/specification/modelldcat-ap-no/[https://data.norge.no/specification/modelldcat-ap-no/[ ]]og https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)].
+Det er ikke et mål for denne veilederen å beskrive alle felter i ModellDCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i spesifikasjonen for informasjonsmodeller, se https://data.norge.no/specification/modelldcat-ap-no/[ModellDCAT-AP-NO] og https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)].
 
 === Målgruppe [[Målgruppe]]
 
