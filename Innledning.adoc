@@ -25,16 +25,16 @@ For å få best mulig innsikt i ModellDCAT-AP-NO og utbytte av veilederen, er de
 
 Veilederen består av følgende deler:
 
-*Kort om ModellDCAT-AP-NO *– gir en kort innføring i spesifikasjonen for beskrivelse av informasjonsmodeller.
+* *Kort om ModellDCAT-AP-NO* – gir en kort innføring i spesifikasjonen for beskrivelse av informasjonsmodeller.
 
-*Generelt* – generell del som beskriver egenskaper og vokabularer som brukes på tvers av klasser.
+* *Generelt* – generell del som beskriver egenskaper og vokabularer som brukes på tvers av klasser.
 
-*Informasjonsmodell* – omhandler hvordan man beskriver informasjonsmodeller.
+* *Informasjonsmodell* – omhandler hvordan man beskriver informasjonsmodeller.
 
-*Modellinnhold* – tar for seg hvordan man beskriver modellelementer og egenskaper.
+* *Modellinnhold* – tar for seg hvordan man beskriver modellelementer og egenskaper.
 
-*Modellkatalog* – omhandler hvordan man beskriver en modellkatalog
+* *Modellkatalog* – omhandler hvordan man beskriver en modellkatalog
 
-*Informasjonsmodell og relasjoner til begreper, datasett og datatjenester* – beskriver hvordan man knytter informasjonsmodeller sammen med øvrige katalogressurser.
+* *Informasjonsmodell og relasjoner til begreper, datasett og datatjenester* – beskriver hvordan man knytter informasjonsmodeller sammen med øvrige katalogressurser.
 
 I tillegg er det laget et vedlegg, *Modellering – et enkelt utgangspunkt* som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.
