@@ -1,3 +1,42 @@
-== Informasjonsmodell
+== Informasjonsmodell [[Informasjonsmodell]]
 
-<tekst kommer> 
+=== Hva er en informasjonsmodell? [[hva-er-infomodell]]
+
+Med informasjonsmodell (`modelldcatno:InformationModel`) mener vi en formell beskrivelse av informasjonen en virksomhet trenger å motta eller selv produsere for å utføre sitt daglige virke. Vi legger til grunn en vid tolkning av begrepet informasjonsmodell. Den omfatter modeller på ulike abstraksjonsnivåer (som konseptuelle, logiske og fysiske modeller) og modeller som beskriver ulike aspekter ved informasjon (som felles- og anvendelsesmodeller).
+
+*****
+For ModellDCAT-AP-NO er det utarbeidet et https://data.norge.no/vocabulary/modelldcatno/modelldcatno.ttl[vokabular for klassifisering av modeller].
+Dette er:
+
+* *Konseptuell modell* er en form for kvalitativ modell som beskriver de viktigste konseptene innenfor et fagdomene og sammenhengen mellom disse.
+
+* *Logisk modell* beskriver hvilke typer informasjon som inngår i en avgrenset sammenheng og hvordan de er logisk relatert, uavhengig av teknologi.
+
+* *Fysisk modell* er en logisk modell som er utarbeidet for å beskrive datautveksling eller lagring av data for en bestemt løsning.
+
+* *Fellesmodell* er en informasjonsmodell til felles bruk på tvers av virksomheter, forretningsområder og/eller applikasjonssegmenter.
+
+* *Anvendelsesmodell* er en modell som er rettet mot et spesifikt anvendelsesområde i en avgrenset kontekst, og er sammensatt av elementer i en fellesmodell.
+*****
+
+
+
+=== Hvordan beskriver du en informasjonsmodell? [[hvordan-beskrive-infomodell]]
+
+Kun tittel (`dct:title`) og utgiver (`dct:publisher`, se <<om-utgiver-og-produsent, Om bruk av egenskap «utgiver» (`dct:publisher`) og «produsent» (`dct:creator`)>>) er obligatorisk for en informasjonsmodell. Det er med andre ord ikke påkrevd å ta med modellelementer i modellbeskrivelsen din, selv om dette er anbefalt. Hvis modellen din kun er tilgjengelig som f.eks. en bildefil, anbefales det å gjøre den tilgjengelig på en nettside og peke til denne ved bruk av dct:hasFormat.  Det er også mulig å referere til en hjemmeside hvor modellen er nærmere beskrevet ved bruk av egenskapen `foaf:homepage`.
+
+Hva som betraktes som større eller mindre endringer, er en faglig vurdering som denne veilederen ikke dekker. Når du ut fra den faglige vurderingen mener at endringene i informasjonsmodellen din er så store at det kan ha betydning for hvordan informasjonsmodellen skal forstås/brukes, bør du opprette en ny instans av `modelldcatno:InformationModel` for den nye versjonen av informasjonsmodellen din, slik at den nye versjonen også får en egen identifikator. Dette gjør at både den nye og den gamle versjonen av informasjonsmodellen din kan refereres til. Du bør også bruke egenskapen «Informasjonsmodell: erstatter» (`dct:replaces`) fra den nye versjonen til den gamle versjonen av informasjonsmodellen (ev. den motsatte egenskapen, «Informasjonsmodell: er erstattet av» (`dct:isReplacedBy`) fra den gamle til den nye versjonen av informasjonsmodellen). For mindre endringer kan du bruke egenskapene «Informasjonsmodell: versjon» (`owl:versionInfo`) og «Informasjonsmodell: versjonsnote» (`adms:versionNotes`) til å dokumentere endringene, uten at det blir opprettet en ny instans og dermed en ny identifikator.
+
+===   Eksempel på en informasjonsmodell (i RDF Turtle) [[eks-infomodell-RDF]]
+
+Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testMod1.ttl[eksempel 1 i RDF Turtle], som er en informasjonsmodell uten modellelementer, men med henvisning til hvor modellen finnes. Eksemplet viser også bruk av alle egenskapene (dvs. ikke bare obligatoriske).
+
+Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testMod2.ttl[eksempel 2 i RDF Turtle], som er en informasjonsmodell med et modellelement. Eksemplet viser bruk av kun obligatoriske egenskaper.
+
+
+=== Hva gjør du når du skal gjøre din informasjonsmodell tilgjengelig? [[tilgjengeliggjør-infomodell]]
+
+To tilfeller:
+
+* Uten modellelementer, men med lenke til hjemmeside der selve modellen finnes, se eksempel 1 ovenfor.
+*   Med modellelementer, slik at hele modellen blir tilgjengeliggjort for automatisk høsting til modellkatalogen, se eksempel 2 ovenfor.
