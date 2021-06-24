@@ -52,7 +52,7 @@ Du kan finne fram til URIene https://data.geonorge.no/administrativeEnheter/nasj
 
 ===  Om bruk av egenskap «lisens» (`dct:license`) [[om-lisens]]
 
-For lisens (`dct:license`) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence], hvis lisensen du bruker finnes på listen. I eksemplet under er det https://creativecommons.org/licenses/by/4.0/[CC BY v.4.0] som er brukt.
+For lisens (`dct:license`) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence], hvis lisensen du bruker finnes på listen. I eksemplet under er det https://creativecommons.org/licenses/by/4.0/[CC BY v. 4.0] som er brukt.
 -----
 <enInfoModell> dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> .
 -----
