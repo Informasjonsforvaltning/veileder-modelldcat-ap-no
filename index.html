@@ -452,7 +452,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_kort_om_modelldcat_ap_no">Kort om ModellDCAT-AP-NO</a></li>
-<li><a href="#_generelt">Generelt</a></li>
+<li><a href="#Generelt">Generelt</a>
+<ul class="sectlevel2">
+<li><a href="#om-identifikator">Om bruk av egenskap «identifikator» (<code>dct:identifier</code>)</a></li>
+<li><a href="#om-utgiver-og-produsent">Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>)</a></li>
+<li><a href="#om-dekningsområde">Om bruk av egenskap «dekningsområde» (<code>dct:spatial</code>)</a></li>
+<li><a href="#om-lisens">Om bruk av egenskap «lisens» (<code>dct:license</code>)</a></li>
+</ul>
+</li>
 <li><a href="#_informasjonsmodell">Informasjonsmodell</a></li>
 <li><a href="#_modellinnhold">Modellinnhold</a></li>
 <li><a href="#_modellkatalog">Modellkatalog</a></li>
@@ -632,10 +639,84 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>Generelt</h2>
+<h2 id="Generelt"><a class="anchor" href="#Generelt"></a>Generelt</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="om-identifikator"><a class="anchor" href="#om-identifikator"></a>Om bruk av egenskap «identifikator» (<code>dct:identifier</code>)</h3>
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p>Egenskapen <code>dct:identifier</code> brukes til å oppgi identifikatoren til subjektet (første leddet) i en RDF-trippel. Subjektet i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassene (inkl. deres subklasser) Modellkatalog (<code>dcat:Catalog</code>), Informasjonsmodell (<code>modelldcatno:InformationModel</code>), Modellelement (<code>modellcatno:ModelElement</code>), Egenskap (<code>modelldcatno:Property</code>), Kodeliste (<code>modelldcatno:CodeListe</code>) og Kodeelement (<code>modelldcatno:CodeElement</code>) derfor få en «innebygd» identifikator. Det er med andre ord strengt tatt ikke nødvendig å ha en identifikator (<code>dct:identifier</code>) i tillegg til den «innebygde» identifikatoren.</p>
+</div>
+<div class="paragraph">
+<p>Egenskapen <code>dct:identifier</code> er derfor satt som anbefalt og ikke obligatorisk i de nevnte klasser og deres subklasser, med unntak av for Modellkatalog (<code>dcat:Catalog</code>). <code>dct:identifier</code> er satt som obligatorisk for Modellkatalog (<code>dcat:Catalog</code>) for at ModellDCAT-AP-NO skal være kompatibel med DCAT-AP-NO, ettersom <code>dct:identifier</code> er obligatorisk for <code>dcat:Catalog</code> der.</p>
+</div>
+<div class="paragraph">
+<p>Egenskapen <code>dct:identifier</code> trenger ikke å inneholde den samme identifikatoren som den innebygde URIen i en RDF-trippel, men når det er den samme identifikatoren, anbefales det at hele den innebygde URIen (subjektet i en trippel) kopieres til <code>dct:identifier</code> i en Modellkatalog (<code>dcat:Catalog</code>).</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>@prefix dct:  &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;https://examples.com/infomoc/exmodcat1&gt; a dcat:Catalog ;
+   dct:identifier "https://examples.com/infomod/exmodcat1"^^xsd:anyURI .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Identifikatoren bør utformes i henhold til <a href="https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492"><em>Standard for pekere til offentlige ressurser på nett</em></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="om-utgiver-og-produsent"><a class="anchor" href="#om-utgiver-og-produsent"></a>Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>)</h3>
+<div class="paragraph">
+<p>Det anbefales å bruke følgende mønster for URI til utgiver (<code>dct:publisher</code>) og produsent (<code>dct:creator</code>), der det siste leddet er organisasjonsnummeret:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;enInfoModell&gt; dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673&gt; .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Når det er behov for å oppgi at «eieren» for en informasjonsmodell som ikke er den samme som utgiveren (<code>dct:publisher</code>), anbefales det å bruke produsent (<code>dct:creator</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="om-dekningsområde"><a class="anchor" href="#om-dekningsområde"></a>Om bruk av egenskap «dekningsområde» (<code>dct:spatial</code>)</h3>
+<div class="paragraph">
+<p>Til dekningsområde (<code>dct:spatial</code>), anbefales det å bruke EU sine kontrollerte vokabularer <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent">Continent</a>, <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country</a>,  og <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place">Place</a>. Eksemplet under (i RDF Turtle) viser bruk av Country-vokabularet for å oppgi Norge (NOR):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;enInfoModell&gt; dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NOR&gt; . # Norge</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Det anbefales å bruke Kartverket sine kontrollerte vokabularer for fylke  og kommune. Eksemplene under viser Oslo som fylke hhv. kommune.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;mod1&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/fylke/id/173159&gt; . # Oslo som fylke
+
+&lt;mod2&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/kommune/id/173018&gt; . # Oslo som kommune</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Du kan finne fram til URIene <a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">her</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="om-lisens"><a class="anchor" href="#om-lisens"></a>Om bruk av egenskap «lisens» (<code>dct:license</code>)</h3>
+<div class="paragraph">
+<p>For lisens (<code>dct:license</code>) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence">Licence</a>, hvis lisensen du bruker finnes på listen. I eksemplet under er det <a href="https://creativecommons.org/licenses/by/4.0/">CC BY v.4.0</a> som er brukt.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;enInfoModell&gt; dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0&gt; .</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -717,7 +798,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-24 09:53:09 UTC
+Sist oppdatert 2021-06-24 10:24:22 UTC
 </div>
 </div>
 </body>
