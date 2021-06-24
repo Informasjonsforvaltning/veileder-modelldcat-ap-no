@@ -1,0 +1,3 @@
+=== Navnerom som er brukt i veilederen
+
+[yellow-background]#<tekst kommer>#

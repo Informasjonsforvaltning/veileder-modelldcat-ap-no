@@ -448,6 +448,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Hensikt-og-avgrensning">Hensikt og avgrensning</a></li>
 <li><a href="#Målgruppe">Målgruppe</a></li>
 <li><a href="#Struktur">Struktur</a></li>
+<li><a href="#_navnerom_som_er_brukt_i_veilederen">Navnerom som er brukt i veilederen</a></li>
 </ul>
 </li>
 <li><a href="#_kort_om_modelldcat_ap_no">Kort om ModellDCAT-AP-NO</a></li>
@@ -583,13 +584,50 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>I tillegg er det laget et vedlegg, <strong>Modellering – et enkelt utgangspunkt</strong> som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_navnerom_som_er_brukt_i_veilederen"><a class="anchor" href="#_navnerom_som_er_brukt_i_veilederen"></a>Navnerom som er brukt i veilederen</h3>
+<div class="paragraph">
+<p><span class="yellow-background">&lt;tekst kommer&gt;</span></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_kort_om_modelldcat_ap_no"><a class="anchor" href="#_kort_om_modelldcat_ap_no"></a>Kort om ModellDCAT-AP-NO</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p>ModellDCAT-AP-NO er basert på <a href="https://data.norge.no/specification/dcat-ap-no/"><em>Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO)</em></a> og inngår i <a href="https://digdir.no/2118">Rammeverk for informasjonsforvaltning</a>.</p>
+</div>
+<div class="paragraph">
+<p>Figuren nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. Egenskapene er utelatt, og kun de mest sentrale klassene og relasjonene er tatt med. Modellene viser kun de norske klasse- og relasjonsnavnene. For fullstendig oversikt, se spesifikasjonen for ModellDCAT-AP-NO.</p>
+</div>
+<div class="paragraph">
+<p><span class="yellow-background">&lt;@@@ sett inn figuren her&gt;</span>.</p>
+</div>
+<div class="paragraph">
+<p>Spesifikasjonen består av to hoveddeler, en katalogdel som er basert på DCAT-AP-NO 2.0 (lysebrune klasser) og en utvidet del, modelldel (grå klasser), som beskriver en informasjonsmodell og dens innhold. Som datasett og datatjenester, er informasjonsmodell beskrevet som en subklasse til klassen <a href="https://data.norge.no/specification/dcat-ap-no/#klasse-katalogisert-ressurs">Katalogisert ressurs</a> (<code>dcat:Resource</code>).</p>
+</div>
+<div class="paragraph">
+<p>I ModellDCAT-AP-NO er det definert noen overordnede klasser. Disse er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://data.norge.no/specification/modelldcat-ap-no/#klasse-katalogisert-ressurs">Katalogisert ressurs</a> (<code>dcat:Resource</code>)</p>
+</li>
+<li>
+<p><a href="https://data.norge.no/specification/modelldcat-ap-no/#Modellelement-egenskaper">Modellelement</a> (<code>modelldcatno:ModelElement</code>)</p>
+</li>
+<li>
+<p><a href="https://data.norge.no/specification/modelldcat-ap-no/#klasse-egenskap">Egenskap</a> (<code>modelldcatno:Property</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Disse skal i en konkret bruk erstattes med en av de spesifikke subklassene.</p>
+</div>
+<div class="paragraph">
+<p>Siden ModellDCAT-AP-NO er basert på DCAT-AP-NO 2.0, er spesifikasjonen beskrevet i RDF. Det betyr at modellen (målmodellen) som du skal transformere til, også må være i RDF.</p>
 </div>
 </div>
 </div>
@@ -679,7 +717,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-24 09:41:23 UTC
+Sist oppdatert 2021-06-24 09:53:09 UTC
 </div>
 </div>
 </body>
