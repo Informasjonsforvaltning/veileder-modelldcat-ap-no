@@ -1,0 +1,3 @@
+== Informasjonsmodell og relasjoner til datasett, datatjenester og begreper
+
+<tekst kommer>
