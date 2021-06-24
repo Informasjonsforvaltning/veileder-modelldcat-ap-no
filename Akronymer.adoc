@@ -1,3 +1,23 @@
 == Akronymer
 
-<tekst kommer>
+AP – Application Profile
+
+DCAT – Data Catalog
+
+FDK – Felles datakatalog
+
+JSON – JavaScript Object Notation
+
+JSON – LD – JSON for Linked Data
+
+NO – Norwegian
+
+RDF – Resource Description Framework
+
+SKOS – Simple Knowledge Organisation System
+
+URI – Uniform Resource identifier
+
+XKOS – eXtended Knowledge Organisation System
+
+XML – eXtended Markup Language
