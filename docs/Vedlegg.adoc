@@ -22,7 +22,7 @@ Hvilken type egenskap er litt avhengig av hva vi fokuserer på i modellen.
 
 I en konseptuell modell der man f.eks. setter begreper i en sammenheng vil en kanskje kalle dette forholdet for en _Assosiasjon_.
 
-[yellow-background]#<sett inn figuren her, "Skyldner" -> "Kreditor">#
+[yellow-background]#<@@@@@ sett inn figuren her, "Skyldner" -> "Kreditor">#
 
 Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.
 
