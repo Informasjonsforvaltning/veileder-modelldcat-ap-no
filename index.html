@@ -443,7 +443,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_innledning">Innledning</a></li>
+<li><a href="#Innledning">Innledning</a>
+<ul class="sectlevel2">
+<li><a href="#Hensikt-og-avgrensning">Hensikt og avgrensning</a></li>
+<li><a href="#Målgruppe">Målgruppe</a></li>
+<li><a href="#Struktur">Struktur</a></li>
+</ul>
+</li>
 <li><a href="#_kort_om_modelldcat_ap_no">Kort om ModellDCAT-AP-NO</a></li>
 <li><a href="#_generelt">Generelt</a></li>
 <li><a href="#_informasjonsmodell">Informasjonsmodell</a></li>
@@ -501,10 +507,77 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innledning"><a class="anchor" href="#_innledning"></a>Innledning</h2>
+<h2 id="Innledning"><a class="anchor" href="#Innledning"></a>Innledning</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="Hensikt-og-avgrensning"><a class="anchor" href="#Hensikt-og-avgrensning"></a>Hensikt og avgrensning</h3>
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p>Denne veilederen skal gi en hjelp til virksomhetene i offentlig forvaltning til å beskrive informasjonsmodellene sine i henhold til <a href="https://data.norge.no/specification/modelldcat-ap-no/"><em>Spesifikasjonen for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)</em></a> og tilgjengeliggjøre dem i <a href="https://data.norge.no/">Felles datakatalog</a>. Den gjelder altså først og fremst virksomheter som allerede har informasjonsmodeller som skal høstes, og ikke de som skal starte opp informasjonsmodellering.</p>
+</div>
+<div class="paragraph">
+<p>Ulike virksomheter bruker ofte ulike modelleringsspråk og -verktøyer. Selv om noen etater forholder seg til de samme modelleringsspråkene og -verktøyene, kan bruken av disse og hvilke versjoner man anvender variere. Hensikten med ModellDCAT-AP-NO er å kunne beskrive virksomhetenes ulike informasjonsmodeller på en ensartet måte. Gjennom en lik tilnærming, er det enklere å finne, forstå, sammenligne og gjenbruke informasjonsmodeller i offentlig sektor.</p>
+</div>
+<div class="paragraph">
+<p>Det er ikke et mål for denne veilederen å beskrive alle felter i ModellDCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i spesifikasjonen for informasjonsmodeller, se <a href="https://data.norge.no/specification/modelldcat-ap-no/">Modell</a>https://data.norge.no/specification/modelldcat-ap-no/[DCAT-AP-NO]<a href="https://data.norge.no/specification/modelldcat-ap-no/">https://data.norge.no/specification/modelldcat-ap-no/[ </a>]og <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl">valideringsreglene (shacl)</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Målgruppe"><a class="anchor" href="#Målgruppe"></a>Målgruppe</h3>
+<div class="paragraph">
+<p>Målgruppen for denne veilederen er deg som:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>skal bruke ModellDCAT-AP-NO for å beskrive eksisterende informasjonsmodeller i virksomheten din</p>
+</li>
+<li>
+<p>skal utvikle/tilpasse verktøystøtte i virksomheten din for beskrivelse av informasjonsmodeller og/eller publisering av disse i henhold til ModellDCAT-AP-NO.</p>
+</li>
+<li>
+<p>ønsker å få bedre forståelse av ModellDCAT-AP-NO</p>
+</li>
+<li>
+<p>ønsker å tilgjengeliggjøre informasjonsmodeller i virksomheten din i Felles datakatalog.</p>
+</li>
+<li>
+<p>ønsker bedre å finne, forstå, sammenligne og gjenbruke modeller beskrevet i henhold til ModellDCAT-AP-NO</p>
+</li>
+<li>
+<p>ønsker å bruke erfaring med og kunnskap om ModellDCAT-AP-NO inn i diskusjoner om relevante, internasjonale standarder</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For å få best mulig innsikt i ModellDCAT-AP-NO og utbytte av veilederen, er det en fordel om du har litt kjennskap til Resource Description Framework (RDF).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Struktur"><a class="anchor" href="#Struktur"></a>Struktur</h3>
+<div class="paragraph">
+<p>Veilederen består av følgende deler:</p>
+</div>
+<div class="paragraph">
+<p>*Kort om ModellDCAT-AP-NO *– gir en kort innføring i spesifikasjonen for beskrivelse av informasjonsmodeller.</p>
+</div>
+<div class="paragraph">
+<p><strong>Generelt</strong> – generell del som beskriver egenskaper og vokabularer som brukes på tvers av klasser.</p>
+</div>
+<div class="paragraph">
+<p><strong>Informasjonsmodell</strong> – omhandler hvordan man beskriver informasjonsmodeller.</p>
+</div>
+<div class="paragraph">
+<p><strong>Modellinnhold</strong> – tar for seg hvordan man beskriver modellelementer og egenskaper.</p>
+</div>
+<div class="paragraph">
+<p><strong>Modellkatalog</strong> – omhandler hvordan man beskriver en modellkatalog</p>
+</div>
+<div class="paragraph">
+<p><strong>Informasjonsmodell og relasjoner til begreper, datasett og datatjenester</strong> – beskriver hvordan man knytter informasjonsmodeller sammen med øvrige katalogressurser.</p>
+</div>
+<div class="paragraph">
+<p>I tillegg er det laget et vedlegg, <strong>Modellering – et enkelt utgangspunkt</strong> som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.</p>
+</div>
 </div>
 </div>
 </div>
@@ -602,7 +675,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-24 09:11:54 UTC
+Sist oppdatert 2021-06-24 09:24:58 UTC
 </div>
 </div>
 </body>
