@@ -2,7 +2,9 @@
 
 Figuren nedenfor viser sammenhengen mellom informasjonsmodell, datasett, API (datatjeneste) og begreper:
 
-[yellow-background]#<@@@ sett inn figuren her>#
+.Sammenheng mellom informasjonsmodell, datasett, datatjenester og begreper
+image::images/sammenheng.png[]
+
 
 [cols="20,80"]
 |===
