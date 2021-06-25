@@ -80,10 +80,12 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 
 ====  Assosiasjon [[Assosiasjon]]
 
-Assosiasjoner (`modelldcatno:Association`) beskriver enkle relasjoner mellom modellelementer, som er vanlig i mer konseptuelle modeller. Eksempelet nedenfor viser et enkelt utsnitt av begrepsmodellen for Folkeregisteret.
+Assosiasjoner (`modelldcatno:Association`) beskriver enkle relasjoner mellom modellelementer, som er vanlig i mer konseptuelle modeller.
 
 .Eksempel - Assosiasjon
 image::images/eksempelAssosiasjon.png[]
+
+Eksempelet viser et enkelt utsnitt av begrepsmodellen for Folkeregisteret.
 
 Mapping til ModellDCAT-AP-NO:
 
@@ -173,9 +175,9 @@ En begrepsreferanse er en relasjon fra et modellelement/egenskap til et begrep, 
 For å kunne beskrive den semantiske betydningen til modellelementer, egenskaper og kodeelementer, kan disse knyttes til begreper.
 
 .Eksempel - Begrepsreferanse
-image::images/eksempelBegrepsreferanse.png[]
+image::images/Begrepsreferanse.png[]
 
-Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det opprettet en tag, _begrep_ som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.
+Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det i eksemplet opprettet en tag, _begrep_ som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.
 
 
 
@@ -193,10 +195,10 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 ===  Begrensningsregel [[Begrensningsregel]]
 
 *****
-En beregningsregel beskriver hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
+En begrensningsregel beskriver hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
 *****
 
-ModellDCAT-AP-NO tillater å beskrive begrensninger på bruk av en eller flere modellelementer og egenskaper ved bruk av klassen Begrensningsregel (`modelldcatno:ConstraintRule`). Beregningsuttrykk kan være en tekstlig beskrivelse, men også mer maskinelle lesbare uttrykk, som f.eks. Object Constraint Language (OCL). I tillegg er det definert to subklasser til Begrensningsregel, Enten eller (`modelldcatno:Xor`) og Eller (`modelldcatno:Or`).
+ModellDCAT-AP-NO tillater å beskrive begrensninger på bruk av en eller flere modellelementer og egenskaper ved bruk av klassen Begrensningsregel (`modelldcatno:ConstraintRule`). Begrensningsuttrykk kan være en tekstlig beskrivelse, men også mer maskinelle lesbare uttrykk, som f.eks. Object Constraint Language (OCL). I tillegg er det definert to subklasser til Begrensningsregel, Enten eller (`modelldcatno:Xor`) og Eller (`modelldcatno:Or`).
 
 .Eksempel - Begrensningsregel
 image::images/eksempelBegrensningsregel.png[]
@@ -246,10 +248,10 @@ Nedenfor vises to eksempler på bruk av Valg (Choice), hvor det første tar for 
 
 ====  Enkelvalg [[Enkelvalg]]
 
-Eksemplet nedenfor viser at Person kan ha null til mange bostedsadresser. Valget _adressevalg_ beskriver at objekttypen Bostedsadresse kan enten ha rollen _vegadresse_ eller _matrikkeladresse_. At dette er et enkelvalg (simple choice), er beskrevet ved at UML assosiasjonen mellom Bostedsadresse og adressevalg har multiplisitet 1.
-
 .Eksempel - Enkelvalg
 image::images/eksempelEnkelvalg.png[]
+
+Eksemplet viser at Person kan ha null til mange bostedsadresser. Valget _adressevalg_ beskriver at objekttypen Bostedsadresse kan enten ha rollen _vegadresse_ eller _matrikkeladresse_. At dette er et enkelvalg (simple choice), er beskrevet ved at UML assosiasjonen mellom Bostedsadresse og adressevalg har multiplisitet 1.
 
 Mapping til ModellDCAT-AP-NO:
 |===
@@ -263,10 +265,10 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 
 ==== Flervalg [[Flervalg]]
 
-Flervalg (multiple choice) brukes når et unikt valg kan foretas flere ganger. Kontaktinformasjon er i eksempelet nedenfor knyttet til et Valg, _telefonvalg_, som representer et valg mellom ulike typer telefonnumre - mobiltelefon, arbeidstelefon og hjemmetelefon. Multiplisiteten 0..2 på assosiasjonsenden mellom Kontaktinformasjon__ __og telefonvalg, beskriver at det kan forekomme opp til to unike valg. Det betyr at _Kontaktinformasjon_ kan maksimalt bestå av to telefonnumre, som er av type mobiltelefon, arbeidstelefon og/eller hjemmetelefon.  I XSD-representasjonen er dette angitt ved at xsd-elementet choice er tildelt verdier for minOccurs og maxOccurs.
-
 .Eksempel - Flervalg
 image::images/eksempelFlervalg.png[]
+
+Flervalg (multiple choice) brukes når et unikt valg kan foretas flere ganger. Kontaktinformasjon er i eksempelet knyttet til et Valg, _telefonvalg_, som representer et valg mellom ulike typer telefonnumre - mobiltelefon, arbeidstelefon og hjemmetelefon. Multiplisiteten 0..2 på assosiasjonsenden mellom Kontaktinformasjon__ __og telefonvalg, beskriver at det kan forekomme opp til to unike valg. Det betyr at _Kontaktinformasjon_ kan maksimalt bestå av to telefonnumre, som er av type mobiltelefon, arbeidstelefon og/eller hjemmetelefon.  I XSD-representasjonen er dette angitt ved at xsd-elementet choice er tildelt verdier for minOccurs og maxOccurs.
 
 Mapping til ModellDCAT-AP-NO:
 |===

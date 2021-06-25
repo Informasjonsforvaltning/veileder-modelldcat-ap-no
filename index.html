@@ -1113,13 +1113,16 @@ Dette er:</p>
 <div class="sect3">
 <h4 id="Assosiasjon"><a class="anchor" href="#Assosiasjon"></a>Assosiasjon</h4>
 <div class="paragraph">
-<p>Assosiasjoner (<code>modelldcatno:Association</code>) beskriver enkle relasjoner mellom modellelementer, som er vanlig i mer konseptuelle modeller. Eksempelet nedenfor viser et enkelt utsnitt av begrepsmodellen for Folkeregisteret.</p>
+<p>Assosiasjoner (<code>modelldcatno:Association</code>) beskriver enkle relasjoner mellom modellelementer, som er vanlig i mer konseptuelle modeller.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/eksempelAssosiasjon.png" alt="eksempelAssosiasjon">
 </div>
 <div class="title">Figur 5. Eksempel - Assosiasjon</div>
+</div>
+<div class="paragraph">
+<p>Eksempelet viser et enkelt utsnitt av begrepsmodellen for Folkeregisteret.</p>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1349,12 +1352,12 @@ Dette er:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/eksempelBegrepsreferanse.png" alt="eksempelBegrepsreferanse">
+<img src="images/Begrepsreferanse.png" alt="Begrepsreferanse">
 </div>
 <div class="title">Figur 9. Eksempel - Begrepsreferanse</div>
 </div>
 <div class="paragraph">
-<p>Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det opprettet en tag, <em>begrep</em> som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.</p>
+<p>Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det i eksemplet opprettet en tag, <em>begrep</em> som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.</p>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1402,12 +1405,12 @@ Dette er:</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>En beregningsregel beskriver hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.</p>
+<p>En begrensningsregel beskriver hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>ModellDCAT-AP-NO tillater å beskrive begrensninger på bruk av en eller flere modellelementer og egenskaper ved bruk av klassen Begrensningsregel (<code>modelldcatno:ConstraintRule</code>). Beregningsuttrykk kan være en tekstlig beskrivelse, men også mer maskinelle lesbare uttrykk, som f.eks. Object Constraint Language (OCL). I tillegg er det definert to subklasser til Begrensningsregel, Enten eller (<code>modelldcatno:Xor</code>) og Eller (<code>modelldcatno:Or</code>).</p>
+<p>ModellDCAT-AP-NO tillater å beskrive begrensninger på bruk av en eller flere modellelementer og egenskaper ved bruk av klassen Begrensningsregel (<code>modelldcatno:ConstraintRule</code>). Begrensningsuttrykk kan være en tekstlig beskrivelse, men også mer maskinelle lesbare uttrykk, som f.eks. Object Constraint Language (OCL). I tillegg er det definert to subklasser til Begrensningsregel, Enten eller (<code>modelldcatno:Xor</code>) og Eller (<code>modelldcatno:Or</code>).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1534,14 +1537,14 @@ Dette er:</p>
 </div>
 <div class="sect3">
 <h4 id="Enkelvalg"><a class="anchor" href="#Enkelvalg"></a>Enkelvalg</h4>
-<div class="paragraph">
-<p>Eksemplet nedenfor viser at Person kan ha null til mange bostedsadresser. Valget <em>adressevalg</em> beskriver at objekttypen Bostedsadresse kan enten ha rollen <em>vegadresse</em> eller <em>matrikkeladresse</em>. At dette er et enkelvalg (simple choice), er beskrevet ved at UML assosiasjonen mellom Bostedsadresse og adressevalg har multiplisitet 1.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/eksempelEnkelvalg.png" alt="eksempelEnkelvalg">
 </div>
 <div class="title">Figur 12. Eksempel - Enkelvalg</div>
+</div>
+<div class="paragraph">
+<p>Eksemplet viser at Person kan ha null til mange bostedsadresser. Valget <em>adressevalg</em> beskriver at objekttypen Bostedsadresse kan enten ha rollen <em>vegadresse</em> eller <em>matrikkeladresse</em>. At dette er et enkelvalg (simple choice), er beskrevet ved at UML assosiasjonen mellom Bostedsadresse og adressevalg har multiplisitet 1.</p>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1581,14 +1584,14 @@ Dette er:</p>
 </div>
 <div class="sect3">
 <h4 id="Flervalg"><a class="anchor" href="#Flervalg"></a>Flervalg</h4>
-<div class="paragraph">
-<p>Flervalg (multiple choice) brukes når et unikt valg kan foretas flere ganger. Kontaktinformasjon er i eksempelet nedenfor knyttet til et Valg, <em>telefonvalg</em>, som representer et valg mellom ulike typer telefonnumre - mobiltelefon, arbeidstelefon og hjemmetelefon. Multiplisiteten 0..2 på assosiasjonsenden mellom Kontaktinformasjon<em> </em>og telefonvalg, beskriver at det kan forekomme opp til to unike valg. Det betyr at <em>Kontaktinformasjon</em> kan maksimalt bestå av to telefonnumre, som er av type mobiltelefon, arbeidstelefon og/eller hjemmetelefon.  I XSD-representasjonen er dette angitt ved at xsd-elementet choice er tildelt verdier for minOccurs og maxOccurs.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/eksempelFlervalg.png" alt="eksempelFlervalg">
 </div>
 <div class="title">Figur 13. Eksempel - Flervalg</div>
+</div>
+<div class="paragraph">
+<p>Flervalg (multiple choice) brukes når et unikt valg kan foretas flere ganger. Kontaktinformasjon er i eksempelet knyttet til et Valg, <em>telefonvalg</em>, som representer et valg mellom ulike typer telefonnumre - mobiltelefon, arbeidstelefon og hjemmetelefon. Multiplisiteten 0..2 på assosiasjonsenden mellom Kontaktinformasjon<em> </em>og telefonvalg, beskriver at det kan forekomme opp til to unike valg. Det betyr at <em>Kontaktinformasjon</em> kan maksimalt bestå av to telefonnumre, som er av type mobiltelefon, arbeidstelefon og/eller hjemmetelefon.  I XSD-representasjonen er dette angitt ved at xsd-elementet choice er tildelt verdier for minOccurs og maxOccurs.</p>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -2361,7 +2364,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-25 10:03:15 UTC
+Sist oppdatert 2021-06-25 11:49:15 UTC
 </div>
 </div>
 </body>
