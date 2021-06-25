@@ -10,15 +10,15 @@ Som minimum skal følgende egenskaper ha verdier:
 
 * beskrivelse (`dct:description`): En kort og presis beskrivelse av modellkatalogen skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 
-*  identifikator (`dct:identifier`): Obligatorisk (se <<Informasjonsmodell, Informassjonsmodell>>).
+*  identifikator (`dct:identifier`): Obligatorisk (se <<om-identifikator, Om ... «identifikator»>>).
 
 *  tittel (`dct:title`): Kortfattet om katalogen. Angi, uten å liste, hvilke modeller den omfatter, f.eks. «Informasjonsmodellene til Digitaliseringsdirektoratet». Bør gjentas når tittelen finnes i flere ulike språk/målformer.
 
 * modell (`modelldcatno:model`): Referanser til en eller flere informasjonsmodeller som er inkludert i modellkatalogen.
 
-**  Kommentar: I https://data.norge.no/specification/modelldcat-ap-no/#Forenklet-modell[UML-diagrammet] står det at `dct:hasPart` er obligatorisk mens `modelldcatno:model` er anbefalt. `dcat:Resource` som `dct:hasPart` peker på er en abstrakt klasse og skal erstattes med instanser av subklassen `modelldcatno:InformationModel` eller `dcat:Catalog`. Bortsett fra tilfeller der man beskriver en modellkatalog bestående av andre modellkataloger, skal en modellkatalog ha minst én informasjonsmodell.
+**  Kommentar: I https://data.norge.no/specification/modelldcat-ap-no/#Forenklet-modell[UML-diagrammet i ModellDCAT-AP-NO] står det at `dct:hasPart` er obligatorisk mens `modelldcatno:model` er anbefalt. `dcat:Resource` som `dct:hasPart` peker på er en abstrakt klasse og skal erstattes med instanser av subklassen `modelldcatno:InformationModel` eller `dcat:Catalog`. Bortsett fra tilfeller der man beskriver en modellkatalog bestående av andre modellkataloger, skal en modellkatalog ha minst én informasjonsmodell.
 
-*  utgiver (`dct:publisher`): Se <<om-utgiver-og-produsent, Om bruk av egenskap «utgiver» (`dct:publisher`) og «produsent» (`dct:creator`) >>.
+*  utgiver (`dct:publisher`): Se <<om-utgiver-og-produsent, Om ... «utgiver»>>.
 
 === Eksempel på en modellkatalog (i RDF Turtle)
 
