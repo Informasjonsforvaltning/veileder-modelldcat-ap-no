@@ -2,7 +2,7 @@
 
 ModellDCAT-AP-NO er basert på https://data.norge.no/specification/dcat-ap-no/[_Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO)_] og inngår i https://digdir.no/2118[Rammeverk for informasjonsforvaltning].
 
-Figuren nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. Egenskapene er utelatt, og kun de mest sentrale klassene og relasjonene er tatt med. Modellene viser kun de norske klasse- og relasjonsnavnene. For fullstendig oversikt, se spesifikasjonen for ModellDCAT-AP-NO.
+Figurene nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. Egenskapene er utelatt, og kun de mest sentrale klassene og relasjonene er tatt med. Modellene viser kun de norske klasse- og relasjonsnavnene. For fullstendig oversikt, se https://data.norge.no/specification/modelldcat-ap-no/[spesifikasjonen for ModellDCAT-AP-NO].
 
 .Forenklet modell for ModellDCAT-AP-NO - Katalogdel
 [link=images/ModellDCAT-AP-NO_Katalogdel.png]
