@@ -20,7 +20,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: [yellow-background]#under utarbeidelse# +
 *Versjon*: [yellow-background]#forberedelse til# 1.0 +
 *Publisert*: [yellow-background]#under utarbeidelse# +
-*Oppdatert*: 2021-06-24 +
+*Oppdatert*: 2021-06-25 +
 *Gjeldende versjon*: https://data.norge.no/guide/veileder-modelldcat-ap-no/ +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/
 
