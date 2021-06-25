@@ -7,7 +7,7 @@ Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenk
 .Et konsept
 image::images/ting.png[]
 
-Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper. Alt vi kan utrykke for å beskrive «tingen» er egenskaper, enten det er enkle fakta som en farge, _Enkeltype_, eller en struktur av opplysninger slik som en adresse, _Datatype_, som har flere felter, slik som gatenavn, husnummer, postnummer og poststed. Allerede med disse tre byggesteinene, klasse, enkelttype og datatype, kan man beskrive en datastruktur.
+Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper. Alt vi kan utrykke for å beskrive «tingen» er egenskaper, enten det er enkle fakta som en farge, _Enkeltype_, eller en struktur av opplysninger slik som en adresse, _Datatype_, som har flere felter, slik som gatenavn, husnummer, postnummer og poststed.
 
 .En datatype
 image::images/adresse.png[]
@@ -26,15 +26,15 @@ Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har e
 
 I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle spiller B for A.
 
-.Relasjon med roller og konsept med egenskaper
-image:images/SkjemaA.png[]
+.Modellelementer med relasjoner og roller
+image::images/SkjemaA.png[]
 
 
 Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.
 
 Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som skjema (A), med to egenskaper som relaterer seg til en person, i det ene tilfelle skyldner, i det andre tilfelle kreditor. Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.
 
-Ved hjelp av konseptet Modellelement, egenskapenes rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke enhver tre-basert datastruktur.
+Ved hjelp av konseptet Modellelement, egenskapenes rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke en datastruktur.
 
 ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er disse fire elementene nok til å beskrive datastrukturer.
 
