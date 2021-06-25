@@ -37,6 +37,6 @@ Veilederen består av følgende deler:
 
 * *Informasjonsmodell og relasjoner til begreper, datasett og datatjenester* – beskriver hvordan man knytter informasjonsmodeller sammen med øvrige katalogressurser.
 
-I tillegg er det laget et vedlegg, *Modellering – et enkelt utgangspunkt* som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.
+I tillegg er det laget et vedlegg, *Informasjonsmodellering enkelt forklart* som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.
 
 include::Navnerom.adoc[]
