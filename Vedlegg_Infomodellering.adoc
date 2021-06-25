@@ -7,9 +7,7 @@ Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenk
 .Et konsept
 image::images/ting.png[]
 
-Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper.
-
-Alt vi kan utrykke for å beskrive «tingen» er egenskaper, enten det er enkle fakta som en farge, _Enkeltype_, eller en struktur av opplysninger slik som en adresse, _Datatype_, som har flere felter, slik som gatenavn, husnummer, postnummer og poststed. Allerede med disse tre byggesteinene, klasse, enkelttype og datatype, kan man beskrive en datastruktur.
+Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper. Alt vi kan utrykke for å beskrive «tingen» er egenskaper, enten det er enkle fakta som en farge, _Enkeltype_, eller en struktur av opplysninger slik som en adresse, _Datatype_, som har flere felter, slik som gatenavn, husnummer, postnummer og poststed. Allerede med disse tre byggesteinene, klasse, enkelttype og datatype, kan man beskrive en datastruktur.
 
 .En datatype
 image::images/adresse.png[]
@@ -23,7 +21,7 @@ Hvilken type egenskap er litt avhengig av hva vi fokuserer på i modellen.
 I en konseptuell modell der man f.eks. setter begreper i en sammenheng vil en kanskje kalle dette forholdet for en _Assosiasjon_.
 
 .En relasjon
-image::images/skyldner-kreditor.png[] 
+image::images/skyldner-kreditor.png[]
 
 Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.
 
