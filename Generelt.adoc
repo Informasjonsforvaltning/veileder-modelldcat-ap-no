@@ -2,7 +2,7 @@
 
 
 
-=== Om bruk av egenskap «identifikator» (`dct:identifier`) [[om-identifikator]]
+=== Om bruk av egenskap «identifikator» (dct:identifier) [[om-identifikator]]
 
 Egenskapen `dct:identifier` brukes til å oppgi identifikatoren til subjektet (første leddet) i en RDF-trippel. Subjektet i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassene (inkl. deres subklasser) Modellkatalog (`dcat:Catalog`), Informasjonsmodell (`modelldcatno:InformationModel`), Modellelement (`modellcatno:ModelElement`), Egenskap (`modelldcatno:Property`), Kodeliste (`modelldcatno:CodeListe`) og Kodeelement (`modelldcatno:CodeElement`) derfor få en «innebygd» identifikator. Det er med andre ord strengt tatt ikke nødvendig å ha en identifikator (`dct:identifier`) i tillegg til den «innebygde» identifikatoren.
 
@@ -23,7 +23,7 @@ Eksempel i RDF Turtle:
 
 Identifikatoren bør utformes i henhold til https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[_Standard for pekere til offentlige ressurser på nett_].
 
-=== Om bruk av egenskap «utgiver» (`dct:publisher`) og «produsent» (`dct:creator`) [[om-utgiver-og-produsent]]
+=== Om bruk av egenskap «utgiver» (dct:publisher) og «produsent» (dct:creator) [[om-utgiver-og-produsent]]
 
 Det anbefales å bruke følgende mønster for URI til utgiver (`dct:publisher`) og produsent (`dct:creator`), der det siste leddet er organisasjonsnummeret:
 -----
@@ -32,7 +32,7 @@ Det anbefales å bruke følgende mønster for URI til utgiver (`dct:publisher`) 
 
 Når det er behov for å oppgi at «eieren» for en informasjonsmodell som ikke er den samme som utgiveren (`dct:publisher`), anbefales det å bruke produsent (`dct:creator`).
 
-=== Om bruk av egenskap «dekningsområde» (`dct:spatial`) [[om-dekningsområde]]
+=== Om bruk av egenskap «dekningsområde» (dct:spatial) [[om-dekningsområde]]
 
 Til dekningsområde (`dct:spatial`), anbefales det å bruke EU sine kontrollerte vokabularer https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent[Continent], https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country[Country],  og https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place[Place]. Eksemplet under (i RDF Turtle) viser bruk av Country-vokabularet for å oppgi Norge (NOR):
 
@@ -50,7 +50,7 @@ Det anbefales å bruke Kartverket sine kontrollerte vokabularer for fylke  og ko
 
 Du kan finne fram til URIene https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[her].
 
-===  Om bruk av egenskap «lisens» (`dct:license`) [[om-lisens]]
+===  Om bruk av egenskap «lisens» (dct:license) [[om-lisens]]
 
 For lisens (`dct:license`) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence], hvis lisensen du bruker finnes på listen. I eksemplet under er det https://creativecommons.org/licenses/by/4.0/[CC BY v. 4.0] som er brukt.
 -----

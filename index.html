@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_kort_om_modelldcat_ap_no">Kort om ModellDCAT-AP-NO</a></li>
 <li><a href="#Generelt">Generelt</a>
 <ul class="sectlevel2">
-<li><a href="#om-identifikator">Om bruk av egenskap «identifikator» (<code>dct:identifier</code>)</a></li>
-<li><a href="#om-utgiver-og-produsent">Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>)</a></li>
-<li><a href="#om-dekningsområde">Om bruk av egenskap «dekningsområde» (<code>dct:spatial</code>)</a></li>
-<li><a href="#om-lisens">Om bruk av egenskap «lisens» (<code>dct:license</code>)</a></li>
+<li><a href="#om-identifikator">Om bruk av egenskap «identifikator» (dct:identifier)</a></li>
+<li><a href="#om-utgiver-og-produsent">Om bruk av egenskap «utgiver» (dct:publisher) og «produsent» (dct:creator)</a></li>
+<li><a href="#om-dekningsområde">Om bruk av egenskap «dekningsområde» (dct:spatial)</a></li>
+<li><a href="#om-lisens">Om bruk av egenskap «lisens» (dct:license)</a></li>
 </ul>
 </li>
 <li><a href="#Informasjonsmodell">Informasjonsmodell</a>
@@ -769,7 +769,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <h2 id="Generelt"><a class="anchor" href="#Generelt"></a>Generelt</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="om-identifikator"><a class="anchor" href="#om-identifikator"></a>Om bruk av egenskap «identifikator» (<code>dct:identifier</code>)</h3>
+<h3 id="om-identifikator"><a class="anchor" href="#om-identifikator"></a>Om bruk av egenskap «identifikator» (dct:identifier)</h3>
 <div class="paragraph">
 <p>Egenskapen <code>dct:identifier</code> brukes til å oppgi identifikatoren til subjektet (første leddet) i en RDF-trippel. Subjektet i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassene (inkl. deres subklasser) Modellkatalog (<code>dcat:Catalog</code>), Informasjonsmodell (<code>modelldcatno:InformationModel</code>), Modellelement (<code>modellcatno:ModelElement</code>), Egenskap (<code>modelldcatno:Property</code>), Kodeliste (<code>modelldcatno:CodeListe</code>) og Kodeelement (<code>modelldcatno:CodeElement</code>) derfor få en «innebygd» identifikator. Det er med andre ord strengt tatt ikke nødvendig å ha en identifikator (<code>dct:identifier</code>) i tillegg til den «innebygde» identifikatoren.</p>
 </div>
@@ -797,7 +797,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="om-utgiver-og-produsent"><a class="anchor" href="#om-utgiver-og-produsent"></a>Om bruk av egenskap «utgiver» (<code>dct:publisher</code>) og «produsent» (<code>dct:creator</code>)</h3>
+<h3 id="om-utgiver-og-produsent"><a class="anchor" href="#om-utgiver-og-produsent"></a>Om bruk av egenskap «utgiver» (dct:publisher) og «produsent» (dct:creator)</h3>
 <div class="paragraph">
 <p>Det anbefales å bruke følgende mønster for URI til utgiver (<code>dct:publisher</code>) og produsent (<code>dct:creator</code>), der det siste leddet er organisasjonsnummeret:</p>
 </div>
@@ -811,7 +811,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="om-dekningsområde"><a class="anchor" href="#om-dekningsområde"></a>Om bruk av egenskap «dekningsområde» (<code>dct:spatial</code>)</h3>
+<h3 id="om-dekningsområde"><a class="anchor" href="#om-dekningsområde"></a>Om bruk av egenskap «dekningsområde» (dct:spatial)</h3>
 <div class="paragraph">
 <p>Til dekningsområde (<code>dct:spatial</code>), anbefales det å bruke EU sine kontrollerte vokabularer <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent">Continent</a>, <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country</a>,  og <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place">Place</a>. Eksemplet under (i RDF Turtle) viser bruk av Country-vokabularet for å oppgi Norge (NOR):</p>
 </div>
@@ -835,7 +835,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="om-lisens"><a class="anchor" href="#om-lisens"></a>Om bruk av egenskap «lisens» (<code>dct:license</code>)</h3>
+<h3 id="om-lisens"><a class="anchor" href="#om-lisens"></a>Om bruk av egenskap «lisens» (dct:license)</h3>
 <div class="paragraph">
 <p>For lisens (<code>dct:license</code>) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence">Licence</a>, hvis lisensen du bruker finnes på listen. I eksemplet under er det <a href="https://creativecommons.org/licenses/by/4.0/">CC BY v. 4.0</a> som er brukt.</p>
 </div>
@@ -2361,7 +2361,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-25 09:38:01 UTC
+Sist oppdatert 2021-06-25 10:03:15 UTC
 </div>
 </div>
 </body>
