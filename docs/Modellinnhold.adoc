@@ -287,10 +287,10 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 En rotobjekttype representerer det overordnede objektet i en gruppe av objekter som er knyttet til hverandre i en hierarkisk struktur.
 *****
 
-Eksempelet nedenfor viser bruk av rotobjekttype. Rotobjektet er her representert som en klasse med stereotype «Rotobjekttype».
-
 .Eksmepel - Rotobjekttype
 image::images/eksempelRotobjekttype.png[]
+
+Eksempelet viser bruk av rotobjekttype. Rotobjektet er her representert som en klasse med stereotype «Rotobjekttype».
 
 Mapping til ModellDCAT-AP-NO:
 |===
@@ -362,10 +362,12 @@ Mapping til ModellDCAT-AP-NO:
 
 ====  Bruk av farger i diagrammer [[Farger-i-diagrammer]]
 
-Ofte grupperes modellelementer ved at de får ulike farger i diagrammer. I ModellDCAT-AP-NO kan dette representeres ved å bruke moduler. Eksemplet er hentet fra SSBs https://github.com/statisticsnorway/gsim-raml-schema[logiske datamodell] for statistikkinformasjon, som er basert på UNECE standard https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model[Generic Statistical Information Model] (GSIM). Egenskaper på objekttypene vises ikke.
+Ofte grupperes modellelementer ved at de får ulike farger i diagrammer. I ModellDCAT-AP-NO kan dette representeres ved å bruke moduler.
 
 .Eksempel - Modul (farger i diagrammer)
 image::images/eksempelFarger.png[]
+
+Eksemplet er hentet fra SSBs https://github.com/statisticsnorway/gsim-raml-schema[logiske datamodell] for statistikkinformasjon, som er basert på UNECE standard https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model[Generic Statistical Information Model] (GSIM). Egenskaper på objekttypene vises ikke.
 
 Mapping til ModellDCAT-AP-NO:
 |===
@@ -392,7 +394,7 @@ Andre typiske brukstilfeller er:
 .Eksempel - Ekstern kodeliste
 image::images/eksempelEksternKodeliste.png[]
 
-I eksemplet nedenfor er SSBs kodeliste «StandardForKommuneinndeling» benyttet for å beskrive verdidomenet til attributtet bostedskommune. I stedet for å legge inn alle kommunene som kodeelementer i modellen, henviser man til SSBs nettsider hvor beskrivelsen av kodelistene og kodeelementene ligger.
+I eksemplet er SSBs kodeliste «StandardForKommuneinndeling» benyttet for å beskrive verdidomenet til attributtet bostedskommune. I stedet for å legge inn alle kommunene som kodeelementer i modellen, henviser man til SSBs nettsider hvor beskrivelsen av kodelistene og kodeelementene ligger.
 
 Mapping til ModellDCAT-AP-NO:
 |===
