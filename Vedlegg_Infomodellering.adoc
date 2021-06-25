@@ -1,4 +1,4 @@
-== Informasjonsmodellering enkelt forklart [[Infomodellering-enkelt-forklart]]
+== Vedlegg - Informasjonsmodellering enkelt forklart [[Infomodellering-enkelt-forklart]]
 
 ===  Modellering – et enkelt utgangspunkt
 

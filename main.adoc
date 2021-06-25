@@ -50,7 +50,7 @@ include::Hjelpemidler.adoc[]
 
 include::Akronymer.adoc[]
 
-include::Infomodellering.adoc[]
+include::Vedlegg_Infomodellering.adoc[]
 
 
 include::./shared/stats.adoc[]
