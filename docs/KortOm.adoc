@@ -8,7 +8,7 @@ Figuren nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. 
 [link=images/ModellDCAT-AP-NO_Katalogdel.png]
 image::images/ModellDCAT-AP-NO_Katalogdel.png[]
 
-.Forenklet modell for ModellDCAT-AP-NO - Katalogdel
+.Forenklet modell for ModellDCAT-AP-NO - Modelldel
 [link=images/ModellDCAT-AP-NO_Modelldel.png]
 image::images/ModellDCAT-AP-NO_Modelldel.png[]
 
