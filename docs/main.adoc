@@ -17,7 +17,7 @@ NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
 
-*Status*: [yellow-background]#under utarbeidelse# +
+*Status*: [yellow-background]#under utarbeidelse#  +
 *Versjon*: [yellow-background]#forberedelse til# 1.0 +
 *Publisert*: [yellow-background]#under utarbeidelse# +
 *Oppdatert*: 2021-06-25 +
