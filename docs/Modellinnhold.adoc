@@ -104,7 +104,7 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 
 *****
 
-.Eksempel på komposisjon og samling
+.Eksempel - Komposisjon og Samling
 image::images/eksempelKomposisjonOgSamling.png[]
 
 Mapping til ModellDCAT-AP-NO:
