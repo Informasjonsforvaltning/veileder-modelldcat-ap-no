@@ -24,13 +24,13 @@
 
 Figuren nedenfor viser en enkel informasjonsmodell med de mest grunnleggende modellelementene. Modellelementene og egenskap er nummerert etter type.
 
-.Eksempel - en enkel modell
+.Eksempel - en enkel informasjonsmodell
 image::images/enEnkelModell.png[]
 
 Mapping til ModellDCAT-AP-NO:
 
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1 |Class |Objekttype (`modelldcatno:ObjectType`)
 |2 |DataType |Datatype (`modelldcatno:Datatype`)
 |3 |Primitive |Enkeltype (`modelldcatno:SimpleType`)
@@ -55,19 +55,19 @@ I modelleksemplet ovenfor har vi beskrevet basis relasjonstyper som spesialiseri
 Abstraksjon er en relasjon som settes mellom modellelementer eller egenskaper for å vise at disse representerer det samme konseptet, men på ulike abstraksjonsnivåer.
 *****
 
+.Eksempel - Abstraksjon
+image::images/eksempelAbstraksjon.png[]
+
 Eksempelet viser to former for abstraksjoner. De grå boksene i diagrammet kommer fra en standard utarbeidet av den Europeiske kringkastingsunionen (EBU). Editorial object representerer et redaksjonelt sammensatt produkt, et program eller en podcast. Timeline representerer tidsaksen i programmet og brukes til å vise hvordan de ulike Mediaitems, plater og prat, avvikles sekvensielt.
 
 Så er det boksen Program. I diagrammet står den alene, men er nok en del av en større modell. For å vise slektskapet mellom Program og Editorial object så bruker man en abstraksjon, i form av en antydning at man her snakker om det samme, uten at man nødvendigvis har et samsvar i hvordan man har modellert med tanke på egenskaper og lignende.
 
 Så har vi en annen abstraksjon: Program-klassen har en egenskap “description” som er en tekstlig beskrivelse av programinnholdet. Dette er jo samme type opplysning som vil framgå av konstruksjonen med Timeline og Mediaitems. Måten det er modellert på her er jo helt annerledes, og den grå modellen vil være mye mer detaljert, men “description” feltet vil fungere som en beskrivelse av det samme konseptet, dette slektskapet utrykker vi med en abstraksjon.
 
-.Eksempel - Abstraksjon
-image::images/eksempelAbstraksjon.png[]
-
 Mapping til ModellDCAT-AP-NO:
 
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno: Attribute`)
 |3|Abstraction|Abstraksjon (`modelldcatno:Abstraction`)
@@ -88,7 +88,7 @@ image::images/eksempelAssosiasjon.png[]
 Mapping til ModellDCAT-AP-NO:
 
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Association|Assosiasjon (`modelldcatno:Association`)
 |===
@@ -109,7 +109,7 @@ image::images/eksempelKomposisjonOgSamling.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Aggregation|Samling (`modelldcatno:Collection`)
 |3|Composition|Komposisjon (`modelldcatno:Composition`)
@@ -131,7 +131,7 @@ Eksemplet viser hvordan man i https://www.kartverket.no/geodataarbeid/standardis
 Mapping til ModellDCAT-AP-NO:
 
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno: Attribute`)
 |3|Realization|Realisering (`modelldcatno:Realization`)
@@ -154,7 +154,7 @@ image::images/eksempelRelasjonsegenskap.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Role|Rolle (`modelldcatno:Role`)
 |3|Composition + Role|Komposisjon (`modelldcatno:Composition`)
@@ -181,7 +181,7 @@ Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer ti
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Primitive|Enkeltype `(modelldcatno:SimpleType`)
@@ -203,7 +203,7 @@ image::images/eksempelBegrensningsregel.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Role|Rolle (`modelldcatno:Role`)
 |3|Constraint|Begrensningsregel (`modelldcatno:ConstraintRule`)
@@ -227,7 +227,7 @@ image::images/eksempelNote.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Note|Note (`modelldcatno:Note`)
@@ -253,7 +253,7 @@ image::images/eksempelEnkelvalg.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Role|Rolle (`modelldcatno:Role`)
 |3|Class, stereotype «Valg»|Valg (`modelldcatno:Choice`)
@@ -270,7 +270,7 @@ image::images/eksempelFlervalg.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Class, stereotype «Valg»|Valg (`modelldcatno:Choice`)
@@ -292,7 +292,7 @@ image::images/eksempelRotobjekttype.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class, stereotype «Rotobjekttype»|Rotobjekttype (`modelldcatno:RootObjectType`)
 |2|Class|Objekttype (`modelldcatno:ObjectType`)
 |3|Role|Rolle (`modelldcatno:Role`)
@@ -330,7 +330,7 @@ image::images/eksempelTypedefinisjon.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Primitive|Enkeltype (`modelldcatno:SimpleType`)
@@ -353,7 +353,7 @@ image::images/eksempelModul.png[]
 Mapping til ModellDCAT-AP-NO:
 
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Stereotype|Modul (`modelldcatno:Module`)
 |===
@@ -367,7 +367,7 @@ image::images/eksempelFarger.png[]
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Legend element|Modul (`modelldcatno:Module`)
 |===
@@ -394,7 +394,7 @@ I eksemplet nedenfor er SSBs kodeliste «StandardForKommuneinndeling» benyttet 
 
 Mapping til ModellDCAT-AP-NO:
 |===
-|*Modellelement-/*|*UML-representasjon*|*ModellDCAT-AP-NO*
+|*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
 |2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Class, stereotype «Kodeliste»|Kodeliste (`modelldcatno:CodeList`)
