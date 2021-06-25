@@ -20,14 +20,14 @@ Hvilken type egenskap er litt avhengig av hva vi fokuserer på i modellen.
 I en konseptuell modell der man f.eks. setter begreper i en sammenheng vil en kanskje kalle dette forholdet for en _Assosiasjon_.
 
 .En relasjon
-image::images/skyldner-kreditor.png[]
+image::images/SkyldnerKreditor.png[]
 
 Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.
 
 I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle spiller B for A.
 
 .Relasjon med roller og konsept med egenskaper
-image:images/skjema-person-adresse.png[]
+image:images/SkjemaA.png[]
 
 
 Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.
