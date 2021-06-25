@@ -468,7 +468,50 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#tilgjengeliggjør-infomodell">Hva gjør du når du skal gjøre din informasjonsmodell tilgjengelig?</a></li>
 </ul>
 </li>
-<li><a href="#_modellinnhold">Modellinnhold</a></li>
+<li><a href="#Modellinnhold">Modellinnhold</a>
+<ul class="sectlevel2">
+<li><a href="#basis-modellelementer-og-egenskaper">Basis modellelementer og egenskaper</a></li>
+<li><a href="#Relasjoner">Relasjoner</a>
+<ul class="sectlevel3">
+<li><a href="#Abstraksjon">Abstraksjon</a></li>
+<li><a href="#Assosiasjon">Assosiasjon</a></li>
+<li><a href="#Samling-og-komposisjon">Samling og komposisjon</a></li>
+<li><a href="#Realisering">Realisering</a></li>
+<li><a href="#Relasjonsegenskap">Relasjonsegenskap</a></li>
+</ul>
+</li>
+<li><a href="#Begrepsreferanse">Begrepsreferanse</a></li>
+<li><a href="#Begrensningsregel">Begrensningsregel</a></li>
+<li><a href="#Note">Note</a></li>
+<li><a href="#Valg">Valg (Choice)</a>
+<ul class="sectlevel3">
+<li><a href="#Enkelvalg">Enkelvalg</a></li>
+<li><a href="#Flervalg">Flervalg</a></li>
+</ul>
+</li>
+<li><a href="#Rotobjekttype">Rotobjekttype</a></li>
+<li><a href="#Mer-om-enkeltyper">Mer om enkeltyper</a>
+<ul class="sectlevel3">
+<li><a href="#Verdirestriksjon">Verdirestriksjon</a></li>
+<li><a href="#Typedefinisjoner">Typedefinisjoner</a></li>
+</ul>
+</li>
+<li><a href="#Mer-om-moduler">Mer om moduler</a>
+<ul class="sectlevel3">
+<li><a href="#Stereotyper">Stereotyper</a></li>
+<li><a href="#Farger-i-diagrammer">Bruk av farger i diagrammer</a></li>
+</ul>
+</li>
+<li><a href="#Mer-om-kodelister">Mer om kodelister</a>
+<ul class="sectlevel3">
+<li><a href="#Ekstern-kodeliste">Ekstern kodeliste</a></li>
+<li><a href="#Kodeliste-med-koder-og-tekst">Kodeliste med koder og kodetekst</a></li>
+<li><a href="#_kodeliste_som_informasjonsmodell">Kodeliste som informasjonsmodell</a></li>
+<li><a href="#_kodeliste_som_et_datasett">Kodeliste som et datasett</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#Modellkatalog">Modellkatalog</a>
 <ul class="sectlevel2">
 <li><a href="#_hva_bruker_du_en_modellkatalog_til">Hva bruker du en modellkatalog til?</a></li>
@@ -616,6 +659,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="sect2">
 <h3 id="_navnerom_som_er_brukt_i_veilederen"><a class="anchor" href="#_navnerom_som_er_brukt_i_veilederen"></a>Navnerom som er brukt i veilederen</h3>
+<div class="paragraph">
+<p><span class="yellow-background">&lt;@@@@@ xs mangler&gt;</span></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -868,10 +914,1082 @@ Dette er:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_modellinnhold"><a class="anchor" href="#_modellinnhold"></a>Modellinnhold</h2>
+<h2 id="Modellinnhold"><a class="anchor" href="#Modellinnhold"></a>Modellinnhold</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="basis-modellelementer-og-egenskaper"><a class="anchor" href="#basis-modellelementer-og-egenskaper"></a>Basis modellelementer og egenskaper</h3>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
-<p>&lt;tekst kommer&gt;</p>
+<p><strong>Objekttype:</strong> beskriver en klasse av objekter med felles egenskaper.</p>
+</div>
+<div class="paragraph">
+<p><strong>Datatype:</strong> beskriver en sammensatt verdistruktur uten identitet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Attributt:</strong> beskriver en basisegenskap ved en objekttype eller datatype.</p>
+</div>
+<div class="paragraph">
+<p><strong>Enkeltype:</strong> beskriver verdidomenet for et attributt.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rolle:</strong> relasjon som beskriver en rolle et objekt har overfor et annet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Kodeliste:</strong> beskriver et sett av lovlige verdier for et attributt.</p>
+</div>
+<div class="paragraph">
+<p><strong>Kodeelement:</strong> representere et navngitt og unikt element i en kodeliste.</p>
+</div>
+<div class="paragraph">
+<p><strong>Spesialisering:</strong> beskriver et arveforhold mellom modellelementer, hvor en subtype er en spesialisering av en mer generell type (supertype).</p>
+</div>
+<div class="paragraph">
+<p><strong>Modul:</strong> representerer en delmodell eller kategori som modellelementer og egenskaper i en modell kan grupperes under.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Figuren nedenfor viser en enkel informasjonsmodell med de mest grunnleggende modellelementene. Modellelementene og egenskap er nummerert etter type.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/enEnkelModell.png" alt="enEnkelModell">
+</div>
+<div class="title">Figur 2. Eksempel - en enkel modell</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DataType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatype (<code>modelldcatno:Datatype</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeliste (<code>modelldcatno:CodeList</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Package</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modul (<code>modelldcatno:Module</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement (<code>modelldcatno:CodeElement</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generalization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesialisering (<code>modelldcatno:Specialization</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exSimpleModel.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Relasjoner"><a class="anchor" href="#Relasjoner"></a>Relasjoner</h3>
+<div class="paragraph">
+<p>I modelleksemplet ovenfor har vi beskrevet basis relasjonstyper som spesialisering og roller. ModellDCAT-AP-NO muliggjør også beskrivelse av mer spesialiserte relasjonstyper, som abstraksjoner, assosiasjoner, komposisjoner, realiseringer og samlinger.</p>
+</div>
+<div class="sect3">
+<h4 id="Abstraksjon"><a class="anchor" href="#Abstraksjon"></a>Abstraksjon</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Abstraksjon er en relasjon som settes mellom modellelementer eller egenskaper for å vise at disse representerer det samme konseptet, men på ulike abstraksjonsnivåer.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Eksempelet viser to former for abstraksjoner. De grå boksene i diagrammet kommer fra en standard utarbeidet av den Europeiske kringkastingsunionen (EBU). Editorial object representerer et redaksjonelt sammensatt produkt, et program eller en podcast. Timeline representerer tidsaksen i programmet og brukes til å vise hvordan de ulike Mediaitems, plater og prat, avvikles sekvensielt.</p>
+</div>
+<div class="paragraph">
+<p>Så er det boksen Program. I diagrammet står den alene, men er nok en del av en større modell. For å vise slektskapet mellom Program og Editorial object så bruker man en abstraksjon, i form av en antydning at man her snakker om det samme, uten at man nødvendigvis har et samsvar i hvordan man har modellert med tanke på egenskaper og lignende.</p>
+</div>
+<div class="paragraph">
+<p>Så har vi en annen abstraksjon: Program-klassen har en egenskap “description” som er en tekstlig beskrivelse av programinnholdet. Dette er jo samme type opplysning som vil framgå av konstruksjonen med Timeline og Mediaitems. Måten det er modellert på her er jo helt annerledes, og den grå modellen vil være mye mer detaljert, men “description” feltet vil fungere som en beskrivelse av det samme konseptet, dette slektskapet utrykker vi med en abstraksjon.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelAbstraksjon.png" alt="eksempelAbstraksjon">
+</div>
+<div class="title">Figur 3. Eksempel - Abstraksjon</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno: Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstraction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstraksjon (<code>modelldcatno:Abstraction</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aggregation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samling (<code>modelldcatno:Collection</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exAbstraction.ttl">eksempelet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Assosiasjon"><a class="anchor" href="#Assosiasjon"></a>Assosiasjon</h4>
+<div class="paragraph">
+<p>Assosiasjoner (<code>modelldcatno:Association</code>) beskriver enkle relasjoner mellom modellelementer, som er vanlig i mer konseptuelle modeller. Eksempelet nedenfor viser et enkelt utsnitt av begrepsmodellen for Folkeregisteret.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelAssosiasjon.png" alt="eksempelAssosiasjon">
+</div>
+<div class="title">Figur 4. Eksempel - Assosiasjon</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Association</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assosiasjon (<code>modelldcatno:Association</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exAssociation.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Samling-og-komposisjon"><a class="anchor" href="#Samling-og-komposisjon"></a>Samling og komposisjon</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Samling:</strong> relasjon mellom to modellelementinstanser, hvor den ene instansen inngår som en del av en annen, og kan eksistere uavhengig av den andre.</p>
+</div>
+<div class="paragraph">
+<p><strong>Komposisjon:</strong> relasjon mellom to modellelementinstanser, hvor den ene instansen inngår som en del av en annen, og kan bare eksistere sammen med den andre.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelKomposisjonOgSamling.png" alt="eksempelKomposisjonOgSamling">
+</div>
+<div class="title">Figur 5. Eksempel på komposisjon og samling</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aggregation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samling (<code>modelldcatno:Collection</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Composition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon (<code>modelldcatno:Composition</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exCollectionAndComposition.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Realisering"><a class="anchor" href="#Realisering"></a>Realisering</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Realisering er et forhold mellom modellelementer og/eller egenskaper, der det ene modellelementet/egenskapen (klienten, engelsk client) realiserer atferden som det andre modellelementet/egenskapen (leverandøren, engelsk supplier) spesifiserer. Flere klienter kan realisere atferden til en enkelt leverandør.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelRealisering.png" alt="eksempelRealisering">
+</div>
+<div class="title">Figur 6. Eksempel - Realisering</div>
+</div>
+<div class="paragraph">
+<p>Eksemplet viser hvordan man i <a href="https://www.kartverket.no/geodataarbeid/standardisering/sosi-standarder2/standarder-geografisk-informasjon">SOSI-standardene</a> for geografisk informasjon har definert SOSI-typer som en realisering av typer i <a href="https://www.geonorge.no/Geodataarbeid/inspire/">INSPIRE</a>. Her er ikke alle egenskapene fra standardene tatt med.</p>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno: Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Realization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering (<code>modelldcatno:Realization</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DataType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatype (<code>modelldcatno:Datatype</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exRealization.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Relasjonsegenskap"><a class="anchor" href="#Relasjonsegenskap"></a>Relasjonsegenskap</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>En relasjonsegenskap beskriver et symmetrisk forhold mellom to egenskaper (som f.eks. rolle, komposisjon og samling). Forholdet kan navngis.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>I ModellDCAT-AP-NO er det ikke et eget modellelement som beskriver toveisrelasjoner, som f.eks. assosiasjon i UML. I stedet kan man knytte to og to egenskaper sammen, f.eks. roller, og navngi dette forholdet. Ved å spesifisere om egenskapene er navigerbar eller ikke, kan man angi leseretning på dette forholdet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelRelasjonsegenskap.png" alt="eksempelRelasjonsegenskap">
+</div>
+<div class="title">Figur 7. Eksempel - Relasjonsegenskap</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Composition + Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon (<code>modelldcatno:Composition</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aggregation + Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samling (<code>modelldcatno:Collection</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Association, Composition, Aggregation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utgjør symmetrisk relasjon med (<code>modelldcatno:formsSymmetryWith</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exRelationProperty.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Begrepsreferanse"><a class="anchor" href="#Begrepsreferanse"></a>Begrepsreferanse</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>En begrepsreferanse er en relasjon fra et modellelement/egenskap til et begrep, hvor begrepet det refereres til beskriver den semantiske betydningen av modellelementet/egenskapen.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For å kunne beskrive den semantiske betydningen til modellelementer, egenskaper og kodeelementer, kan disse knyttes til begreper.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelBegrepsreferanse.png" alt="eksempelBegrepsreferanse">
+</div>
+<div class="title">Figur 8. Eksempel - Begrepsreferanse</div>
+</div>
+<div class="paragraph">
+<p>Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det opprettet en tag, <em>begrep</em> som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.</p>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype <code>(modelldcatno:SimpleType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tagged value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">begrep (<code>dct:subject</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exSubject.ttl">eksemplet i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Begrensningsregel"><a class="anchor" href="#Begrensningsregel"></a>Begrensningsregel</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>En beregningsregel beskriver hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>ModellDCAT-AP-NO tillater å beskrive begrensninger på bruk av en eller flere modellelementer og egenskaper ved bruk av klassen Begrensningsregel (<code>modelldcatno:ConstraintRule</code>). Beregningsuttrykk kan være en tekstlig beskrivelse, men også mer maskinelle lesbare uttrykk, som f.eks. Object Constraint Language (OCL). I tillegg er det definert to subklasser til Begrensningsregel, Enten eller (<code>modelldcatno:Xor</code>) og Eller (<code>modelldcatno:Or</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelBegrensningsregel.png" alt="eksempelBegrensningsregel">
+</div>
+<div class="title">Figur 9. Eksempel - Begrensningsregel</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrensningsregel (<code>modelldcatno:ConstraintRule</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enten eller (<code>modelldcatno:Xor</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Or</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eller (<code>modelldcatno:Or</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exConstraintRule.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+<div class="paragraph">
+<p>Merk at for klassen Begrensningsregel (<code>modelldcatno:ConstraintRule</code>) må minst én av egenskapene tittel (<code>dct:title</code>) eller begrensningsregel (<code>modelldcatno:constraintExpression</code>) ha en verdi. Dette gjelder imidlertid ikke for subklassene Enten eller (<code>modelldcatno:Xor</code>) og Eller (<code>modelldcatno:Or</code>), hvor kun egenskapen begrensning (<code>modelldcatno:constraint</code>) er påkrevd.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Note"><a class="anchor" href="#Note"></a>Note</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>En note (merkelapp) brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer og/eller egenskaper.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelNote.png" alt="eksempelNote">
+</div>
+<div class="title">Figur 10. Eksempel - Note</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note (<code>modelldcatno:Note</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exNote.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Valg"><a class="anchor" href="#Valg"></a>Valg (Choice)</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Valg er en egenskap som tillater at én egenskap eller modellelement av et sett av valgbare egenskaper og/eller modellelementer, kan inngå i det bærende modellelementet.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Nedenfor vises to eksempler på bruk av Valg (Choice), hvor det første tar for seg enkelvalg (single choice) og det andre flervalg (multiple choice). Valg (Choice) er et konsept som finnes bl.a. i XML Schema Definition (XSD). I eksemplene har vi benyttet UML-modeller. Siden Valg ikke er et eget element i UML klassediagram, har vi framstilt det som en klasse med stereotype «Valg». Selve valgene har vi også representert som XSD Choice.</p>
+</div>
+<div class="sect3">
+<h4 id="Enkelvalg"><a class="anchor" href="#Enkelvalg"></a>Enkelvalg</h4>
+<div class="paragraph">
+<p>Eksemplet nedenfor viser at Person kan ha null til mange bostedsadresser. Valget <em>adressevalg</em> beskriver at objekttypen Bostedsadresse kan enten ha rollen <em>vegadresse</em> eller <em>matrikkeladresse</em>. At dette er et enkelvalg (simple choice), er beskrevet ved at UML assosiasjonen mellom Bostedsadresse og adressevalg har multiplisitet 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelEnkelvalg.png" alt="eksempelEnkelvalg">
+</div>
+<div class="title">Figur 11. Eksempel - Enkelvalg</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class, stereotype «Valg»</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valg (<code>modelldcatno:Choice</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exChoice.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Flervalg"><a class="anchor" href="#Flervalg"></a>Flervalg</h4>
+<div class="paragraph">
+<p>Flervalg (multiple choice) brukes når et unikt valg kan foretas flere ganger. Kontaktinformasjon er i eksempelet nedenfor knyttet til et Valg, <em>telefonvalg</em>, som representer et valg mellom ulike typer telefonnumre - mobiltelefon, arbeidstelefon og hjemmetelefon. Multiplisiteten 0..2 på assosiasjonsenden mellom Kontaktinformasjon<em> </em>og telefonvalg, beskriver at det kan forekomme opp til to unike valg. Det betyr at <em>Kontaktinformasjon</em> kan maksimalt bestå av to telefonnumre, som er av type mobiltelefon, arbeidstelefon og/eller hjemmetelefon.  I XSD-representasjonen er dette angitt ved at xsd-elementet choice er tildelt verdier for minOccurs og maxOccurs.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelFlervalg.png" alt="eksempelFlervalg">
+</div>
+<div class="title">Figur 12. Eksempel - Flervalg</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class, stereotype «Valg»</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valg (<code>modelldcatno:Choice</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exChoice.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Rotobjekttype"><a class="anchor" href="#Rotobjekttype"></a>Rotobjekttype</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>En rotobjekttype representerer det overordnede objektet i en gruppe av objekter som er knyttet til hverandre i en hierarkisk struktur.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Eksempelet nedenfor viser bruk av rotobjekttype. Rotobjektet er her representert som en klasse med stereotype «Rotobjekttype».</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelRotobjekttype.png" alt="eksempelRotobjekttype">
+</div>
+<div class="title">Figur 13. Eksmepel - Rotobjekttype</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class, stereotype «Rotobjekttype»</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rotobjekttype (<code>modelldcatno:RootObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rolle (<code>modelldcatno:Role</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exRootObjectType.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Mer-om-enkeltyper"><a class="anchor" href="#Mer-om-enkeltyper"></a>Mer om enkeltyper</h3>
+<div class="sect3">
+<h4 id="Verdirestriksjon"><a class="anchor" href="#Verdirestriksjon"></a>Verdirestriksjon</h4>
+<div class="paragraph">
+<p>I ModellDCAT-AP-N0 kan enkeltyper (modelldcatno:SimpleType) ha verdirestriksjoner. Til dette benyttes et utvalg av XML sine tegn- og tallrestriksjoner.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>xsd:fractionDigits</p>
+</li>
+<li>
+<p>xsd:length</p>
+</li>
+<li>
+<p>xsd:maxExclusive</p>
+</li>
+<li>
+<p>xsd:maxInclusive</p>
+</li>
+<li>
+<p>xsd:maxLength</p>
+</li>
+<li>
+<p>xsd:minExclusive</p>
+</li>
+<li>
+<p>xsd:minInclusive</p>
+</li>
+<li>
+<p>xsd:minLength</p>
+</li>
+<li>
+<p>xsd:pattern</p>
+</li>
+<li>
+<p>xsd:totalDigits</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Typedefinisjoner"><a class="anchor" href="#Typedefinisjoner"></a>Typedefinisjoner</h4>
+<div class="paragraph">
+<p>I ulike modeller kan det benyttes ulike standard ontologier eller bibliotek for primitive datatyper (enkeltyper), f.eks. typesett definert for XSD eller UML.</p>
+</div>
+<div class="paragraph">
+<p>Ved bruk av egenskapen typedefinisjon (modelldcatno:typeDefinitionReference), kan man referere til ontologien eller biblioteket hvor datatypene er definert i form av en URI.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelTypedefinisjon.png" alt="eksempelTypedefinisjon">
+</div>
+<div class="title">Figur 14. Eksempel - Typedefinisjon</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype (<code>modelldcatno:SimpleType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tagged value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maksimum inklusivt (<code>xsd:maxInclusive</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tagged value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minimum inklusivt (<code>xsd:minInclusive</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tagged value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">typedefinisjon (<code>modelldcatno:typeDefinitionReference</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exSimpleType.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Mer-om-moduler"><a class="anchor" href="#Mer-om-moduler"></a>Mer om moduler</h3>
+<div class="sect3">
+<h4 id="Stereotyper"><a class="anchor" href="#Stereotyper"></a>Stereotyper</h4>
+<div class="paragraph">
+<p>ModellDCAT-AP-NO har ikke et eget element for stereotyper slik man har i UML. Stereotype kan ses som en type gruppering, og moduler kan derfor brukes hvis man har behov for å representere dette.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelModul.png" alt="eksempelModul">
+</div>
+<div class="title">Figur 15. Eksempel - Modul (stereotyper)</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stereotype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modul (<code>modelldcatno:Module</code>)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="Farger-i-diagrammer"><a class="anchor" href="#Farger-i-diagrammer"></a>Bruk av farger i diagrammer</h4>
+<div class="paragraph">
+<p>Ofte grupperes modellelementer ved at de får ulike farger i diagrammer. I ModellDCAT-AP-NO kan dette representeres ved å bruke moduler. Eksemplet er hentet fra SSBs <a href="https://github.com/statisticsnorway/gsim-raml-schema">logiske datamodell</a> for statistikkinformasjon, som er basert på UNECE standard <a href="https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model">Generic Statistical Information Model</a> (GSIM). Egenskaper på objekttypene vises ikke.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelFarger.png" alt="eksempelFarger">
+</div>
+<div class="title">Figur 16. Eksempel - Modul (farger i diagrammer)</div>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legend element</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modul (<code>modelldcatno:Module</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exModule.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Mer-om-kodelister"><a class="anchor" href="#Mer-om-kodelister"></a>Mer om kodelister</h3>
+<div class="paragraph">
+<p>Under <a href="#basis-modellelementer-og-egenskaper">Basis modellelementer og egenskaper</a> har vi laget et eksempel på hvordan man kan beskrive en enkel enumerasjon som en kodeliste (<code>modelldcatno:CodeList</code>), og hvordan vi med egenskapen  «har verdi fra» (<code>modelldcatno:hasValueFrom</code>) kan angi at et attributt (<code>modelldcatno:Attribute</code>) relaterer seg til en kodeliste.</p>
+</div>
+<div class="paragraph">
+<p>Andre typiske brukstilfeller er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kodeliste brukt i en informasjonsmodell, hvor kodeelementer ikke er beskrevet, men med referanse til en ekstern beskrivelse av kodelisten eller kodeverket med tilhørende kodeelementer.</p>
+</li>
+<li>
+<p>Kodeliste brukt i informasjonsmodell, med koder og kodetekst</p>
+</li>
+<li>
+<p>Kodeliste som egen informasjonsmodell</p>
+</li>
+<li>
+<p>Kodeliste som et datasett (åpne data)</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="Ekstern-kodeliste"><a class="anchor" href="#Ekstern-kodeliste"></a>Ekstern kodeliste</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempelEksternKodeliste.png" alt="eksempelEksternKodeliste">
+</div>
+<div class="title">Figur 17. Eksempel - Ekstern kodeliste</div>
+</div>
+<div class="paragraph">
+<p>I eksemplet nedenfor er SSBs kodeliste «StandardForKommuneinndeling» benyttet for å beskrive verdidomenet til attributtet bostedskommune. I stedet for å legge inn alle kommunene som kodeelementer i modellen, henviser man til SSBs nettsider hvor beskrivelsen av kodelistene og kodeelementene ligger.</p>
+</div>
+<div class="paragraph">
+<p>Mapping til ModellDCAT-AP-NO:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modellelement-/</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UML-representasjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ModellDCAT-AP-NO</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekttype (<code>modelldcatno:ObjectType</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt (<code>modelldcatno:Attribute</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class, stereotype «Kodeliste»</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeliste (<code>modelldcatno:CodeList</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tagged value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">har referanse (<code>rdfs:seeAlso</code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/exExternalCodeList.ttl">eksempel i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Kodeliste-med-koder-og-tekst"><a class="anchor" href="#Kodeliste-med-koder-og-tekst"></a>Kodeliste med koder og kodetekst</h4>
+<div class="paragraph">
+<p>Enumerasjoner representerer lister med kodeverdier. I ModellDCAT-AP-NO er det mulig å gi mer utdypende beskrivelser av kodeelementene i en kodeliste, som kodetekst, inklusjons-/eksklusjonsmerknader, frarådet kodetekst, definisjon m.m.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testCodelist.ttl">eksempel på en kodeliste i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kodeliste_som_informasjonsmodell"><a class="anchor" href="#_kodeliste_som_informasjonsmodell"></a>Kodeliste som informasjonsmodell</h4>
+<div class="paragraph">
+<p>I ModellDCAT-AP-NO er det mulig å beskrive en eller flere uavhengige kodelister i en egen informasjonsmodell. Ofte er det slik at man gjenbruker de samme kodelistene i ulike modeller. I stedet for å beskrive den samme kodelisten flere ganger, kan man beskrive den én gang i en egen informasjonsmodell. Dermed kan man referere til kodelisten fra modellene hvor den er benyttet.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testMod2.ttl">eksempel på en kodeliste som en egen informasjonsmodell, i RDF Turtle</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kodeliste_som_et_datasett"><a class="anchor" href="#_kodeliste_som_et_datasett"></a>Kodeliste som et datasett</h4>
+<div class="paragraph">
+<p>En kodeliste kan ses på som en samling av data, og kan dermed beskrives som et datasett i henhold til DCAT-AP-NO.</p>
+</div>
+<div class="paragraph">
+<p>For å angi at datasettet er en kodeliste, brukes <code>dct:type</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;https://examples.com/infomoc/exdataset&gt; a dcat:Dataset ;
+   dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST&gt; .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hvis kodelisten i tillegg er beskrevet som en informasjonsmodell i ModellDCAT-AP-NO, kan denne ses på som en distribusjon til datasettet. Du knytter da datasettet og informasjonsmodellen sammen ved bruk av <code>dcat:distribution</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;https://examples.com/infomoc/exdataset&gt; a dcat:Dataset ;
+   dcat:distribution [ a dcat:Distribution ; dcat:accessURL &lt;https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod1&gt; ] .</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -943,7 +2061,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/sammenheng.png" alt="sammenheng">
 </div>
-<div class="title">Figur 2. Sammenheng mellom informasjonsmodell, datasett, datatjenester og begreper</div>
+<div class="title">Figur 18. Sammenheng mellom informasjonsmodell, datasett, datatjenester og begreper</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1107,7 +2225,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/ting.png" alt="ting">
 </div>
-<div class="title">Figur 3. Et konsept</div>
+<div class="title">Figur 19. Et konsept</div>
 </div>
 <div class="paragraph">
 <p>Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper.</p>
@@ -1119,7 +2237,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/adresse.png" alt="adresse">
 </div>
-<div class="title">Figur 4. En datatype</div>
+<div class="title">Figur 20. En datatype</div>
 </div>
 <div class="sect3">
 <h4 id="_relasjoner"><a class="anchor" href="#_relasjoner"></a>Relasjoner</h4>
@@ -1223,7 +2341,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-25 05:27:22 UTC
+Sist oppdatert 2021-06-25 07:45:08 UTC
 </div>
 </div>
 </body>
