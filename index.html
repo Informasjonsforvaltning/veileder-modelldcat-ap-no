@@ -526,10 +526,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_akronymer">Akronymer</a></li>
 <li><a href="#Infomodellering-enkelt-forklart">Vedlegg - Informasjonsmodellering enkelt forklart</a>
 <ul class="sectlevel2">
-<li><a href="#_modellering_et_enkelt_utgangspunkt">Modellering – et enkelt utgangspunkt</a>
+<li><a href="#_modellering_et_enkelt_utgangspunkt">Modellering – et enkelt utgangspunkt</a></li>
+<li><a href="#_metode">Metode</a>
 <ul class="sectlevel3">
-<li><a href="#_relasjoner">Relasjoner</a></li>
-<li><a href="#_metode">Metode</a></li>
+<li><a href="#_finn_interesseområdet_og_omfanget_av_modellen">Finn interesseområdet og omfanget av modellen</a></li>
+<li><a href="#_finn_mulige_gjenbrukbare_modeller">Finn mulige gjenbrukbare modeller</a></li>
+<li><a href="#_finn_de_viktige_objektstypene">Finn de viktige objektstypene</a></li>
+<li><a href="#_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper">Finne sammenhengen mellom generelle og spesielle objekttyper</a></li>
+<li><a href="#_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier">Definer egenskapene til objekttypene og beskriv tillatte verdier</a></li>
+<li><a href="#_beskriv_forhold_mellom_objekttypene">Beskriv forhold mellom objekttypene</a></li>
+<li><a href="#_beskriv_verdidomener_i_form_av_kodelister">Beskriv verdidomener i form av kodelister</a></li>
 </ul>
 </li>
 </ul>
@@ -2219,7 +2225,7 @@ Dette er:</p>
 <div class="sect2">
 <h3 id="_modellering_et_enkelt_utgangspunkt"><a class="anchor" href="#_modellering_et_enkelt_utgangspunkt"></a>Modellering – et enkelt utgangspunkt</h3>
 <div class="paragraph">
-<p>Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig hva vi omtaler det som er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.</p>
+<p>Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig av hva vi omtaler det som, er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2236,8 +2242,6 @@ Dette er:</p>
 </div>
 <div class="title">Figur 21. En datatype</div>
 </div>
-<div class="sect3">
-<h4 id="_relasjoner"><a class="anchor" href="#_relasjoner"></a>Relasjoner</h4>
 <div class="paragraph">
 <p>En modell består som regel av mer enn ett konsept. Relasjonen mellom konsepter er i denne sammenhengen også en egenskap.</p>
 </div>
@@ -2263,31 +2267,39 @@ Dette er:</p>
 <p><span class="image"><img src="images/skjema-person-adresse.png" alt="skjema person adresse"></span></p>
 </div>
 <div class="paragraph">
-<p>Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.<br>
- Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som skjema (A), med to egenskaper som relaterer seg til en person, i det ene tilfelle skyldner, i det andre tilfelle kreditor. Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.<br>
-Ved hjelp av konseptet Modellelement, egenskapene rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke enhver tre-basert datastruktur.<br>
-ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er disse fire elementene nok til å beskrive datastrukturer.</p>
+<p>Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som skjema (A), med to egenskaper som relaterer seg til en person, i det ene tilfelle skyldner, i det andre tilfelle kreditor. Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ved hjelp av konseptet Modellelement, egenskapenes rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke enhver tre-basert datastruktur.</p>
+</div>
+<div class="paragraph">
+<p>ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er disse fire elementene nok til å beskrive datastrukturer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_metode"><a class="anchor" href="#_metode"></a>Metode</h3>
+<div class="paragraph">
+<p>Ulike arkitekter vil ha ulike svar på hva de gjør når de modellerer, men her er en metode som virker.</p>
 </div>
 <div class="sect3">
-<h4 id="_metode"><a class="anchor" href="#_metode"></a>Metode</h4>
-<div class="paragraph">
-<p>Ulike arkitekter vil ha ulike svar på hva de gjør når de modellerer, men her er en metode som virker:</p>
-</div>
-<div class="sect4">
-<h5 id="_finn_interesseområdet_og_omfanget_av_modellen"><a class="anchor" href="#_finn_interesseområdet_og_omfanget_av_modellen"></a>Finn interesseområdet og omfanget av modellen</h5>
+<h4 id="_finn_interesseområdet_og_omfanget_av_modellen"><a class="anchor" href="#_finn_interesseområdet_og_omfanget_av_modellen"></a>Finn interesseområdet og omfanget av modellen</h4>
 <div class="paragraph">
 <p>Det er sagt at alt henger sammen med alt, men skal man lage en modell er det viktig å klargjøre akkurat hva modellen skal gi en oversikt og innsikt i, og hvem som skal bruke modellen.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_finn_mulige_gjenbrukbare_modeller"><a class="anchor" href="#_finn_mulige_gjenbrukbare_modeller"></a>Finn mulige gjenbrukbare modeller</h5>
+<div class="sect3">
+<h4 id="_finn_mulige_gjenbrukbare_modeller"><a class="anchor" href="#_finn_mulige_gjenbrukbare_modeller"></a>Finn mulige gjenbrukbare modeller</h4>
 <div class="paragraph">
 <p>Ikke gjør dobbeltarbeid, hvis du kan bruke ting du eller andre allerede har definert betyr det ikke bare mindre arbeid for deg som arkitekt, det betyr også mindre arbeid for de som skal omsette den konkrete modellen til en applikasjon. Gjenbruk av de samme basiskonseptene letter den gjennomgående forståelsen og sikrer at man beskriver de samme tingene på en ensartet måte.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_finn_de_viktige_objektstypene"><a class="anchor" href="#_finn_de_viktige_objektstypene"></a>Finn de viktige objektstypene</h5>
+<div class="sect3">
+<h4 id="_finn_de_viktige_objektstypene"><a class="anchor" href="#_finn_de_viktige_objektstypene"></a>Finn de viktige objektstypene</h4>
 <div class="paragraph">
 <p>Også kalt klassene, tingene eller konseptene. Pek ut hva som er viktigst i modellen, og start med disse og bygg ut derifra.</p>
 </div>
@@ -2295,30 +2307,32 @@ ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne ve
 <p>De viktige konseptene kjennetegnes ofte ved at ord som betegner konseptet går igjen i beskrivelsen av systemet. Les igjennom sentrale dokumenter som beskriver feltet og vurder viktigheten av alle substantiver.</p>
 </div>
 <div class="paragraph">
-<p>I en konseptuell modell vil ofte de objektene som har flest tilknyttede relasjoner være de viktigste.<br>
-La en gruppe mennesker som kjenner område skrive ned på gule lapper hva de forbinder med området som skal beskrives med ett ord. De sentrale objektene er ofte de som beskrives av flest lapper.</p>
+<p>I en konseptuell modell vil ofte de objektene som har flest tilknyttede relasjoner være de viktigste.</p>
+</div>
+<div class="paragraph">
+<p>La en gruppe mennesker som kjenner område skrive ned på gule lapper hva de forbinder med området som skal beskrives med ett ord. De sentrale objektene er ofte de som beskrives av flest lapper.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper"><a class="anchor" href="#_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper"></a>Finne sammenhengen mellom generelle og spesielle objekttyper</h5>
+<div class="sect3">
+<h4 id="_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper"><a class="anchor" href="#_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper"></a>Finne sammenhengen mellom generelle og spesielle objekttyper</h4>
 <div class="paragraph">
 <p>Noen konsepter er slik at det er en utdyping av et annet: loff er en type brød, da kan man si at brød er generelt og at loff er en spesialisering av brød. Med andre ord, vurder om en objekttype er en spesialisering eller en generalisering av en annen objekttype.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"><a class="anchor" href="#_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"></a>Definer egenskapene til objekttypene og beskriv tillatte verdier</h5>
+<div class="sect3">
+<h4 id="_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"><a class="anchor" href="#_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"></a>Definer egenskapene til objekttypene og beskriv tillatte verdier</h4>
 <div class="paragraph">
-<p>Det er her informasjonen kommer inn i modellen. For hver objektstype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier. F eks at en gitt egenskap er et heltall mellom 10 og 50.</p>
+<p>Det er her informasjonen kommer inn i modellen. For hver objektstype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier. F.eks. at en gitt egenskap er et heltall mellom 10 og 50.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_beskriv_forhold_mellom_objekttypene"><a class="anchor" href="#_beskriv_forhold_mellom_objekttypene"></a>Beskriv forhold mellom objekttypene</h5>
+<div class="sect3">
+<h4 id="_beskriv_forhold_mellom_objekttypene"><a class="anchor" href="#_beskriv_forhold_mellom_objekttypene"></a>Beskriv forhold mellom objekttypene</h4>
 <div class="paragraph">
 <p>Her beskrives forholdene mellom objektene i modellen. Avhengig av hvilken type modell det er kan man beskrive dette som en assosiasjon, en rolle eller noen av de andre relasjonstypene som er beskrevet senere i dette dokumentet. Forholdet mellom objekttypene i modellen gir struktur.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_beskriv_verdidomener_i_form_av_kodelister"><a class="anchor" href="#_beskriv_verdidomener_i_form_av_kodelister"></a>Beskriv verdidomener i form av kodelister</h5>
+<div class="sect3">
+<h4 id="_beskriv_verdidomener_i_form_av_kodelister"><a class="anchor" href="#_beskriv_verdidomener_i_form_av_kodelister"></a>Beskriv verdidomener i form av kodelister</h4>
 <div class="paragraph">
 <p>Dersom man vil beskrive en egenskap som noe mer spesifikt enn at egenskapen har et gitt format, men ønsker at feltet skal inneholde en konkret verdi fra en liste, da definerer man en kodeliste. Slike kodelister kan beskrive valgmuligheter som har en lokal gyldighet i en gitt modell, eller være større lister som brukes på tvers av ulike modeller. Dersom listene er store og har et globalt anvendelsesområde, bør de publiseres som egne dokumenter og kun bli referert til fra modellen. Små lokale kodelister kan defineres som en del av modellen.</p>
 </div>
@@ -2338,10 +2352,9 @@ ga('send', 'pageview');
 </div>
 </div>
 </div>
-</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-25 08:47:25 UTC
+Sist oppdatert 2021-06-25 09:02:39 UTC
 </div>
 </div>
 </body>
