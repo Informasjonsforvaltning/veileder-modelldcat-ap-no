@@ -26,7 +26,7 @@ Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har e
 
 I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle spiller B for A.
 
-.Relasjon med roller og konsept med egenskaper
+.Modellelementer med relasjoner og roller
 image::images/SkjemaA.png[]
 
 
