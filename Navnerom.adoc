@@ -1,6 +1,5 @@
 === Navnerom som er brukt i veilederen
 
-[yellow-background]#<@@@@@ xs mangler>#
 
 [cols="10,45,45"]
 |===
