@@ -18,7 +18,7 @@ image::images/sammenheng.png[]
 |7|begrep (`dct:subject`)
 |===
 
-Som vi har sett, kan vi referere fra informasjonsmodeller, modellelementer, egenskaper eller kodeelementer til begreper ved bruk av egenskapen begrep (`dct:subject`). Se beskrivelser og eksempler under <<Informasjonsmodell, Informasjonsmodell>> og <<Begrepsreferanser, Begrepsreferanser>>.
+Som vi har sett, kan vi referere fra informasjonsmodeller, modellelementer, egenskaper eller kodeelementer til begreper ved bruk av egenskapen begrep (`dct:subject`). Se beskrivelser og eksempler under <<Informasjonsmodell, Informasjonsmodell>> og <<Begrepsreferanse, Begrepsreferanser>>.
 
 Når det gjelder et datasett eller datatjeneste, refererer man fra disse til en informasjonsmodell. I ModellDCAT-AP-NO er klassen Informasjonsmodell subklasse av `dct:Standard`. Ved å bruke egenskapen `dct:conformsTo`, kan et datasett eller en datatjeneste referere til en informasjonsmodell.
 
