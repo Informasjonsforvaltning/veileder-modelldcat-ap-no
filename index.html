@@ -720,14 +720,17 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="paragraph">
 <p>Figuren nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. Egenskapene er utelatt, og kun de mest sentrale klassene og relasjonene er tatt med. Modellene viser kun de norske klasse- og relasjonsnavnene. For fullstendig oversikt, se spesifikasjonen for ModellDCAT-AP-NO.</p>
 </div>
-<div class="paragraph">
-<p><span class="yellow-background">&lt;@@@ fignuren skal splittes i to&gt;</span>.</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="images/ModellDCAT-AP-NO_Katalogdel.png"><img src="images/ModellDCAT-AP-NO_Katalogdel.png" alt="ModellDCAT AP NO Katalogdel"></a>
+</div>
+<div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO - Katalogdel</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="images/forenkletUML.png"><img src="images/forenkletUML.png" alt="forenkletUML"></a>
+<a class="image" href="images/ModellDCAT-AP-NO_Modelldel.png"><img src="images/ModellDCAT-AP-NO_Modelldel.png" alt="ModellDCAT AP NO Modelldel"></a>
 </div>
-<div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO</div>
+<div class="title">Figur 2. Forenklet modell for ModellDCAT-AP-NO - Katalogdel</div>
 </div>
 <div class="paragraph">
 <p>Spesifikasjonen består av to hoveddeler, en katalogdel som er basert på DCAT-AP-NO 2.0 (lysebrune klasser) og en utvidet del, modelldel (grå klasser), som beskriver en informasjonsmodell og dens innhold. Som datasett og datatjenester, er informasjonsmodell beskrevet som en subklasse til klassen <a href="https://data.norge.no/specification/dcat-ap-no/#klasse-katalogisert-ressurs">Katalogisert ressurs</a> (<code>dcat:Resource</code>).</p>
@@ -953,7 +956,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/enEnkelModell.png" alt="enEnkelModell">
 </div>
-<div class="title">Figur 2. Eksempel - en enkel informasjonsmodell</div>
+<div class="title">Figur 3. Eksempel - en enkel informasjonsmodell</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1039,7 +1042,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelAbstraksjon.png" alt="eksempelAbstraksjon">
 </div>
-<div class="title">Figur 3. Eksempel - Abstraksjon</div>
+<div class="title">Figur 4. Eksempel - Abstraksjon</div>
 </div>
 <div class="paragraph">
 <p>Eksempelet viser to former for abstraksjoner. De grå boksene i diagrammet kommer fra en standard utarbeidet av den Europeiske kringkastingsunionen (EBU). Editorial object representerer et redaksjonelt sammensatt produkt, et program eller en podcast. Timeline representerer tidsaksen i programmet og brukes til å vise hvordan de ulike Mediaitems, plater og prat, avvikles sekvensielt.</p>
@@ -1110,7 +1113,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelAssosiasjon.png" alt="eksempelAssosiasjon">
 </div>
-<div class="title">Figur 4. Eksempel - Assosiasjon</div>
+<div class="title">Figur 5. Eksempel - Assosiasjon</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1159,7 +1162,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelKomposisjonOgSamling.png" alt="eksempelKomposisjonOgSamling">
 </div>
-<div class="title">Figur 5. Eksempel - Komposisjon og Samling</div>
+<div class="title">Figur 6. Eksempel - Komposisjon og Samling</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1210,7 +1213,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelRealisering.png" alt="eksempelRealisering">
 </div>
-<div class="title">Figur 6. Eksempel - Realisering</div>
+<div class="title">Figur 7. Eksempel - Realisering</div>
 </div>
 <div class="paragraph">
 <p>Eksemplet viser hvordan man i <a href="https://www.kartverket.no/geodataarbeid/standardisering/sosi-standarder2/standarder-geografisk-informasjon">SOSI-standardene</a> for geografisk informasjon har definert SOSI-typer som en realisering av typer i <a href="https://www.geonorge.no/Geodataarbeid/inspire/">INSPIRE</a>. Her er ikke alle egenskapene fra standardene tatt med.</p>
@@ -1277,7 +1280,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelRelasjonsegenskap.png" alt="eksempelRelasjonsegenskap">
 </div>
-<div class="title">Figur 7. Eksempel - Relasjonsegenskap</div>
+<div class="title">Figur 8. Eksempel - Relasjonsegenskap</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1342,7 +1345,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelBegrepsreferanse.png" alt="eksempelBegrepsreferanse">
 </div>
-<div class="title">Figur 8. Eksempel - Begrepsreferanse</div>
+<div class="title">Figur 9. Eksempel - Begrepsreferanse</div>
 </div>
 <div class="paragraph">
 <p>Siden det ikke er en egen mekanisme i UML for å referere fra modellelementer til begreper, er det opprettet en tag, <em>begrep</em> som plassholder for begrepsreferanser.  Begrepsreferansene peker her til Skatteetatenes begreper for folkeregisterperson og fødselsdato.</p>
@@ -1404,7 +1407,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelBegrensningsregel.png" alt="eksempelBegrensningsregel">
 </div>
-<div class="title">Figur 9. Eksempel - Begrensningsregel</div>
+<div class="title">Figur 10. Eksempel - Begrensningsregel</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1468,7 +1471,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelNote.png" alt="eksempelNote">
 </div>
-<div class="title">Figur 10. Eksempel - Note</div>
+<div class="title">Figur 11. Eksempel - Note</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1532,7 +1535,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelEnkelvalg.png" alt="eksempelEnkelvalg">
 </div>
-<div class="title">Figur 11. Eksempel - Enkelvalg</div>
+<div class="title">Figur 12. Eksempel - Enkelvalg</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1579,7 +1582,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelFlervalg.png" alt="eksempelFlervalg">
 </div>
-<div class="title">Figur 12. Eksempel - Flervalg</div>
+<div class="title">Figur 13. Eksempel - Flervalg</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1639,7 +1642,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelRotobjekttype.png" alt="eksempelRotobjekttype">
 </div>
-<div class="title">Figur 13. Eksmepel - Rotobjekttype</div>
+<div class="title">Figur 14. Eksmepel - Rotobjekttype</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1731,7 +1734,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelTypedefinisjon.png" alt="eksempelTypedefinisjon">
 </div>
-<div class="title">Figur 14. Eksempel - Typedefinisjon</div>
+<div class="title">Figur 15. Eksempel - Typedefinisjon</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1796,7 +1799,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelModul.png" alt="eksempelModul">
 </div>
-<div class="title">Figur 15. Eksempel - Modul (stereotyper)</div>
+<div class="title">Figur 16. Eksempel - Modul (stereotyper)</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1835,7 +1838,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelFarger.png" alt="eksempelFarger">
 </div>
-<div class="title">Figur 16. Eksempel - Modul (farger i diagrammer)</div>
+<div class="title">Figur 17. Eksempel - Modul (farger i diagrammer)</div>
 </div>
 <div class="paragraph">
 <p>Mapping til ModellDCAT-AP-NO:</p>
@@ -1899,7 +1902,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/eksempelEksternKodeliste.png" alt="eksempelEksternKodeliste">
 </div>
-<div class="title">Figur 17. Eksempel - Ekstern kodeliste</div>
+<div class="title">Figur 18. Eksempel - Ekstern kodeliste</div>
 </div>
 <div class="paragraph">
 <p>I eksemplet nedenfor er SSBs kodeliste «StandardForKommuneinndeling» benyttet for å beskrive verdidomenet til attributtet bostedskommune. I stedet for å legge inn alle kommunene som kodeelementer i modellen, henviser man til SSBs nettsider hvor beskrivelsen av kodelistene og kodeelementene ligger.</p>
@@ -2058,7 +2061,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/sammenheng.png" alt="sammenheng">
 </div>
-<div class="title">Figur 18. Sammenheng mellom informasjonsmodell, datasett, datatjenester og begreper</div>
+<div class="title">Figur 19. Sammenheng mellom informasjonsmodell, datasett, datatjenester og begreper</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2222,7 +2225,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/ting.png" alt="ting">
 </div>
-<div class="title">Figur 19. Et konsept</div>
+<div class="title">Figur 20. Et konsept</div>
 </div>
 <div class="paragraph">
 <p>Denne informasjonen som beskriver «tingen» kan vi kalle egenskaper.</p>
@@ -2234,7 +2237,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/adresse.png" alt="adresse">
 </div>
-<div class="title">Figur 20. En datatype</div>
+<div class="title">Figur 21. En datatype</div>
 </div>
 <div class="sect3">
 <h4 id="_relasjoner"><a class="anchor" href="#_relasjoner"></a>Relasjoner</h4>
@@ -2251,7 +2254,7 @@ Dette er:</p>
 <div class="content">
 <img src="images/skyldner-kreditor.png" alt="skyldner kreditor">
 </div>
-<div class="title">Figur 21. En relasjon</div>
+<div class="title">Figur 22. En relasjon</div>
 </div>
 <div class="paragraph">
 <p>Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.</p>
@@ -2341,7 +2344,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-25 08:10:08 UTC
+Sist oppdatert 2021-06-25 08:40:43 UTC
 </div>
 </div>
 </body>

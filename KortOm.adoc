@@ -4,11 +4,14 @@ ModellDCAT-AP-NO er basert på https://data.norge.no/specification/dcat-ap-no/[_
 
 Figuren nedenfor viser en forenklet modell av ModellDCAT-AP-NO beskrevet i UML. Egenskapene er utelatt, og kun de mest sentrale klassene og relasjonene er tatt med. Modellene viser kun de norske klasse- og relasjonsnavnene. For fullstendig oversikt, se spesifikasjonen for ModellDCAT-AP-NO.
 
-[yellow-background]#<@@@ fignuren skal splittes i to>#.
+.Forenklet modell for ModellDCAT-AP-NO - Katalogdel
+[link=images/ModellDCAT-AP-NO_Katalogdel.png]
+image::images/ModellDCAT-AP-NO_Katalogdel.png[]
 
-.Forenklet modell for ModellDCAT-AP-NO
-[link=images/forenkletUML.png]
-image::images/forenkletUML.png[]
+.Forenklet modell for ModellDCAT-AP-NO - Katalogdel
+[link=images/ModellDCAT-AP-NO_Modelldel.png]
+image::images/ModellDCAT-AP-NO_Modelldel.png[]
+
 
 Spesifikasjonen består av to hoveddeler, en katalogdel som er basert på DCAT-AP-NO 2.0 (lysebrune klasser) og en utvidet del, modelldel (grå klasser), som beskriver en informasjonsmodell og dens innhold. Som datasett og datatjenester, er informasjonsmodell beskrevet som en subklasse til klassen https://data.norge.no/specification/dcat-ap-no/#klasse-katalogisert-ressurs[Katalogisert ressurs] (`dcat:Resource`).
 
