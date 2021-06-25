@@ -1,0 +1,14 @@
+=== Navnerom som er brukt i veilederen
+
+
+[cols="10,45,45"]
+|===
+|*Prefiks*|*Navnerom*|*Forklaring/navn*
+|adms|http://www.w3.org/ns/adms[http://www.w3.org/ns/adms#]|https://www.w3.org/TR/vocab-adms/[Asset Description Metadata Schema]
+|dcat|http://www.w3.org/ns/dcat[http://www.w3.org/ns/dcat#]|https://www.w3.org/TR/vocab-dcat/[Data Catalog Vocabulary]
+|dct|http://purl.org/dc/terms/[http://purl.org/dc/terms/]|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCMI Metadata Terms]
+|foaf|http://xmlns.com/foaf/0.1/[http://xmlns.com/foaf/0.1/]|http://xmlns.com/foaf/spec/[FOAF Vocabulary]
+|modelldcatno|https://data.norge.no/vocabulary/modelldcatno[https://data.norge.no/vocabulary/modelldcatno#]|https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)]
+|owl|http://www.w3.org/2002/07/owl[http://www.w3.org/2002/07/owl#]|https://www.w3.org/TR/owl-features/[OWL Web Ontology Language]
+|xsd|http://www.w3.org/2001/XMLSchema[http://www.w3.org/2001/XMLSchema#]|https://www.w3.org/TR/xmlschema-2/[XML Schema Part 2: Datatypes Second Edition]
+|===

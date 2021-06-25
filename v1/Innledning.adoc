@@ -1,0 +1,42 @@
+== Innledning [[Innledning]]
+
+=== Hensikt og avgrensning [[Hensikt-og-avgrensning]]
+
+Denne veilederen skal gi en hjelp til virksomhetene i offentlig forvaltning til å beskrive informasjonsmodellene sine i henhold til https://data.norge.no/specification/modelldcat-ap-no/[_Spesifikasjonen for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)_] og tilgjengeliggjøre dem i https://data.norge.no/[Felles datakatalog]. Den gjelder altså først og fremst virksomheter som allerede har informasjonsmodeller som skal høstes, og ikke de som skal starte opp informasjonsmodellering.
+
+Ulike virksomheter bruker ofte ulike modelleringsspråk og -verktøyer. Selv om noen etater forholder seg til de samme modelleringsspråkene og -verktøyene, kan bruken av disse og hvilke versjoner man anvender variere. Hensikten med ModellDCAT-AP-NO er å kunne beskrive virksomhetenes ulike informasjonsmodeller på en ensartet måte. Gjennom en lik tilnærming, er det enklere å finne, forstå, sammenligne og gjenbruke informasjonsmodeller i offentlig sektor.
+
+Det er ikke et mål for denne veilederen å beskrive alle felter i ModellDCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i spesifikasjonen for informasjonsmodeller, se https://data.norge.no/specification/modelldcat-ap-no/[ModellDCAT-AP-NO] og https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)].
+
+=== Målgruppe [[Målgruppe]]
+
+Målgruppen for denne veilederen er deg som:
+
+*       skal bruke ModellDCAT-AP-NO for å beskrive eksisterende informasjonsmodeller i virksomheten din
+*       skal utvikle/tilpasse verktøystøtte i virksomheten din for beskrivelse av informasjonsmodeller og/eller publisering av disse i henhold til ModellDCAT-AP-NO.
+*       ønsker å få bedre forståelse av ModellDCAT-AP-NO
+*       ønsker å tilgjengeliggjøre informasjonsmodeller i virksomheten din i Felles datakatalog.
+*       ønsker bedre å finne, forstå, sammenligne og gjenbruke modeller beskrevet i henhold til ModellDCAT-AP-NO
+*       ønsker å bruke erfaring med og kunnskap om ModellDCAT-AP-NO inn i diskusjoner om relevante, internasjonale standarder
+
+For å få best mulig innsikt i ModellDCAT-AP-NO og utbytte av veilederen, er det en fordel om du har litt kjennskap til Resource Description Framework (RDF).
+
+=== Struktur [[Struktur]]
+
+Veilederen består av følgende deler:
+
+* *Kort om ModellDCAT-AP-NO* – gir en kort innføring i spesifikasjonen for beskrivelse av informasjonsmodeller.
+
+* *Generelt* – generell del som beskriver egenskaper og vokabularer som brukes på tvers av klasser.
+
+* *Informasjonsmodell* – omhandler hvordan man beskriver informasjonsmodeller.
+
+* *Modellinnhold* – tar for seg hvordan man beskriver modellelementer og egenskaper.
+
+* *Modellkatalog* – omhandler hvordan man beskriver en modellkatalog
+
+* *Informasjonsmodell og relasjoner til begreper, datasett og datatjenester* – beskriver hvordan man knytter informasjonsmodeller sammen med øvrige katalogressurser.
+
+I tillegg er det laget et vedlegg, *Informasjonsmodellering enkelt forklart* som gir en kort innføring i hva informasjonsmodeller er og anbefalt metode for utforming av disse.
+
+include::Navnerom.adoc[]
