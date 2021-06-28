@@ -1,10 +1,54 @@
 include::locale/attributes-nb.adoc[]
+:description:
+:doctype: book
+:docinfo:
+:icons: font
 :toc: left
+ifdef::backend-pdf[:toc: macro]
+:toclevels: 3
+:sectanchors:
+:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
-// Tittel og versjonsinfo som oppdateres i egen fil og inkluderes her:
-include::main1_TittelOgVersjoninfo.adoc[]
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-// Rekkefølge av kapitler oppdateres i egen fil og inkluderes her:
-include::main2_Kapittelrekkefølge.adoc[]
+include::./shared/download.adoc[]
 
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+*Status*: [yellow-background]#under utarbeidelse# +
+*Versjon*: [yellow-background]#forberedelse til# 1.0 +
+*Publisert*: [yellow-background]#under utarbeidelse# +
+*Oppdatert*: 2021-06-28 +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-modelldcat-ap-no/ +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/
+
+toc::[] // for PDF, TOC kommer her
+
+
+// her kommer selve innholdet:
+
+include::Innledning.adoc[]
+
+include::KortOm.adoc[]
+
+include::Generelt.adoc[]
+
+include::Informasjonsmodell.adoc[]
+
+include::Modellinnhold.adoc[]
+
+include::Modellkatalog.adoc[]
+
+include::Sammenheng.adoc[]
+
+include::Referanser.adoc[]
+
+include::Hjelpemidler.adoc[]
+
+include::Akronymer.adoc[]
+
+include::Vedlegg_Infomodellering.adoc[]
+
+// statistikk:
 include::./shared/stats.adoc[]
