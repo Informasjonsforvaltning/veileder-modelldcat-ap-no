@@ -1,4 +1,5 @@
 include::locale/attributes-nb.adoc[]
+= Veileder for beskrivelse av informasjonsmodeller
 :description:
 :doctype: book
 :docinfo:
@@ -23,7 +24,8 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Gjeldende versjon*: https://data.norge.no/guide/veileder-modelldcat-ap-no/ +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/
 
-toc::[] // for PDF, TOC kommer her
+// for PDF, TOC kommer her:
+toc::[]
 
 
 // her kommer selve innholdet:
