@@ -531,7 +531,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_finn_interesseområdet_og_omfanget_av_modellen">Finn interesseområdet og omfanget av modellen</a></li>
 <li><a href="#_finn_mulige_gjenbrukbare_modeller">Finn mulige gjenbrukbare modeller</a></li>
-<li><a href="#_finn_de_viktige_objektstypene">Finn de viktige objektstypene</a></li>
+<li><a href="#_finn_de_viktige_objekttypene">Finn de viktige objekttypene</a></li>
 <li><a href="#_finne_sammenhengen_mellom_generelle_og_spesielle_objekttyper">Finne sammenhengen mellom generelle og spesielle objekttyper</a></li>
 <li><a href="#_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier">Definer egenskapene til objekttypene og beskriv tillatte verdier</a></li>
 <li><a href="#_beskriv_forhold_mellom_objekttypene">Beskriv forhold mellom objekttypene</a></li>
@@ -577,10 +577,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Status</strong>: <span class="yellow-background">under utarbeidelse</span><br>
-<strong>Versjon</strong>: <span class="yellow-background">forberedelse til</span> 1.0<br>
-<strong>Publisert</strong>: <span class="yellow-background">under utarbeidelse</span><br>
-<strong>Oppdatert</strong>: 2021-06-29<br>
+<p><strong>Status</strong>: Gheldende<br>
+<strong>Versjon</strong>: 1.0<br>
+<strong>Publisert</strong>: 2021-06-30<br>
+<strong>Oppdatert</strong>: 2021-06-30<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/guide/veileder-modelldcat-ap-no/" class="bare">https://data.norge.no/guide/veileder-modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/veileder-modelldcat-ap-no/</a></p>
 </div>
@@ -2240,7 +2240,7 @@ Dette er:</p>
 <div class="sect2">
 <h3 id="_modellering_et_enkelt_utgangspunkt"><a class="anchor" href="#_modellering_et_enkelt_utgangspunkt"></a>Modellering – et enkelt utgangspunkt</h3>
 <div class="paragraph">
-<p>Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig av hva vi omtaler det som, er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.</p>
+<p>Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser eller objekter, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig hva vi omtaler det som er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2261,6 +2261,9 @@ Dette er:</p>
 <p>En modell består som regel av mer enn ett konsept. Relasjonen mellom konsepter er i denne sammenhengen også en egenskap.</p>
 </div>
 <div class="paragraph">
+<p>Dersom konseptene er konkrete, omtales de ofte som objekter, men sett ut ifra modellen er dette synonymer.</p>
+</div>
+<div class="paragraph">
 <p>Hvilken type egenskap er litt avhengig av hva vi fokuserer på i modellen.</p>
 </div>
 <div class="paragraph">
@@ -2276,7 +2279,7 @@ Dette er:</p>
 <p>Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.</p>
 </div>
 <div class="paragraph">
-<p>I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle spiller B for A.</p>
+<p>I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle "Person” spiller for "A-skjema".</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2285,16 +2288,16 @@ Dette er:</p>
 <div class="title">Figur 23. Modellelementer med relasjoner og roller</div>
 </div>
 <div class="paragraph">
-<p>Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.</p>
+<p>Vi kan tenke oss et skjema der man i tillegg til enkle attributter, en slags egenskap, som "beløp" og "betalingsdato" ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektes på adresseinformasjon som en egen klasse.</p>
 </div>
 <div class="paragraph">
-<p>Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som skjema (A), med to egenskaper som relaterer seg til en person, i det ene tilfelle skyldner, i det andre tilfelle kreditor. Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.</p>
+<p>Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som "A-skjema", med to egenskaper og skjemaet relaterer seg til en person, i det ene tilfelle "skyldner", i det andre tilfelle "kreditor". Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.</p>
 </div>
 <div class="paragraph">
-<p>Ved hjelp av konseptet Modellelement, egenskapenes rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke en datastruktur.</p>
+<p>Ved hjelp av Modellelement, rolle, der ulike Modellelementer knyttes sammen for å beskrive informasjonsstrukturen med attributter som bruker enkeltype og datatype for data om konseptet, kan man utrykke en datastruktur.</p>
 </div>
 <div class="paragraph">
-<p>ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er disse fire elementene nok til å beskrive datastrukturer.</p>
+<p>ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er Modellelement, rolle, attributt med enkeltype eller datatype nok til å beskrive datastrukturer.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2305,7 +2308,7 @@ Dette er:</p>
 <div class="sect3">
 <h4 id="_finn_interesseområdet_og_omfanget_av_modellen"><a class="anchor" href="#_finn_interesseområdet_og_omfanget_av_modellen"></a>Finn interesseområdet og omfanget av modellen</h4>
 <div class="paragraph">
-<p>Det er sagt at alt henger sammen med alt, men skal man lage en modell er det viktig å klargjøre akkurat hva modellen skal gi en oversikt og innsikt i, og hvem som skal bruke modellen.</p>
+<p>Det er sagt at alt henger sammen med alt, men skal man lage en modell er det viktig å klargjøre akkurat hva modellen skal gi en oversikt over og innsikt i, og hvem som skal bruke modellen.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2315,12 +2318,12 @@ Dette er:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_finn_de_viktige_objektstypene"><a class="anchor" href="#_finn_de_viktige_objektstypene"></a>Finn de viktige objektstypene</h4>
+<h4 id="_finn_de_viktige_objekttypene"><a class="anchor" href="#_finn_de_viktige_objekttypene"></a>Finn de viktige objekttypene</h4>
 <div class="paragraph">
 <p>Også kalt klassene, tingene eller konseptene. Pek ut hva som er viktigst i modellen, og start med disse og bygg ut derifra.</p>
 </div>
 <div class="paragraph">
-<p>De viktige konseptene kjennetegnes ofte ved at ord som betegner konseptet går igjen i beskrivelsen av systemet. Les igjennom sentrale dokumenter som beskriver feltet og vurder viktigheten av alle substantiver.</p>
+<p>De viktige konseptene kjennetegnes ofte ved at ord som betegner konseptet går igjen i beskrivelsen av systemet. Les igjennom sentrale dokumenter som beskriver fagfeltet og vurder viktigheten av alle substantiver.</p>
 </div>
 <div class="paragraph">
 <p>I en konseptuell modell vil ofte de objektene som har flest tilknyttede relasjoner være de viktigste.</p>
@@ -2338,7 +2341,7 @@ Dette er:</p>
 <div class="sect3">
 <h4 id="_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"><a class="anchor" href="#_definer_egenskapene_til_objekttypene_og_beskriv_tillatte_verdier"></a>Definer egenskapene til objekttypene og beskriv tillatte verdier</h4>
 <div class="paragraph">
-<p>Det er her informasjonen kommer inn i modellen. For hver objektstype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier. F.eks. at en gitt egenskap er et heltall mellom 10 og 50.</p>
+<p>Det er her informasjonen kommer inn i modellen. For hver objekttype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier? F.eks. at en gitt egenskap er et heltall mellom 10 og 50.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2370,7 +2373,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-29 11:30:03 UTC
+Sist oppdatert 2021-06-30 13:59:48 UTC
 </div>
 </div>
 </body>
