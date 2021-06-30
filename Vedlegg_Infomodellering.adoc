@@ -2,7 +2,7 @@
 
 ===  Modellering – et enkelt utgangspunkt
 
-Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig av hva vi omtaler det som, er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.
+Vi lager modeller for å strukturere kunnskap. Vi deler opp informasjonen i tenkte enheter: ting. Disse tingene omtales litt forskjellig avhengig av tradisjon og sammenheng, noen sier klasser eller objekter, noen sier konsepter og i ModellDCAT-AP-NO snakker vi om modellelementer. Uavhengig hva vi omtaler det som er klassen eller modellelementet en måte å samle informasjon om et konsept, noe konkret eller abstrakt.
 
 .Et konsept
 image::images/ting.png[]
@@ -15,6 +15,8 @@ image::images/adresse.png[]
 
 En modell består som regel av mer enn ett konsept. Relasjonen mellom konsepter er i denne sammenhengen også en egenskap.
 
+Dersom konseptene er konkrete, omtales de ofte som objekter, men sett ut ifra modellen er dette synonymer.
+
 Hvilken type egenskap er litt avhengig av hva vi fokuserer på i modellen.
 
 I en konseptuell modell der man f.eks. setter begreper i en sammenheng vil en kanskje kalle dette forholdet for en _Assosiasjon_.
@@ -24,19 +26,19 @@ image::images/SkyldnerKreditor.png[]
 
 Her kan man si at en skyldner kjennetegnes av at man som en av egenskapene har en betalingsforpliktelse til en kreditor.
 
-I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle spiller B for A.
+I modeller som beskriver konkrete forhold, logiske eller fysiske modeller, er det vanlig å beskrive relasjonen mellom to objekter utfra hva det ene objektet betyr for det andre. Rettere sagt, hvilken rolle "Person” spiller for "A-skjema".
 
 .Modellelementer med relasjoner og roller
 image::images/SkjemaA.png[]
 
 
-Vi kan tenke oss et skjema (A) der man i tillegg til enkle egenskaper som beløp og datoer ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektet på adresseinformasjon som en egen klasse.
+Vi kan tenke oss et skjema der man i tillegg til enkle attributter, en slags egenskap, som "beløp" og "betalingsdato" ønsker å beskrive en person med navn og adresse. Person er her et selvstendig konsept eller en klasse som blir brukt av skjemaet, i tillegg er det hektes på adresseinformasjon som en egen klasse.
 
-Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som skjema (A), med to egenskaper som relaterer seg til en person, i det ene tilfelle skyldner, i det andre tilfelle kreditor. Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.
+Skjemaet som skal beskrives, inneholder informasjon om en som skylder penger, derfor kan man tenke seg at dette beskrives som "A-skjema", med to egenskaper og skjemaet relaterer seg til en person, i det ene tilfelle "skyldner", i det andre tilfelle "kreditor". Dette er det samme forholdet som var en assosiasjon i den konseptuelle modellen, men som utrykkes som et rolle-forhold i den logiske eller fysiske modellen.
 
-Ved hjelp av konseptet Modellelement, egenskapenes rolle, der ulike Modellelementer brukes for å beskrive ulike deler av informasjonen; og enkeltype og datatype for data om konseptet, kan man utrykke en datastruktur.
+Ved hjelp av Modellelement, rolle, der ulike Modellelementer knyttes sammen for å beskrive informasjonsstrukturen med attributter som bruker enkeltype og datatype for data om konseptet, kan man utrykke en datastruktur.
 
-ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er disse fire elementene nok til å beskrive datastrukturer.
+ModellDCAT-AP-NO har et større mulighetsrom, noe du kan se tidligere i denne veilederen, men som en enkel start er Modellelement, rolle, attributt med enkeltype eller datatype nok til å beskrive datastrukturer.
 
 === Metode
 
@@ -44,17 +46,17 @@ Ulike arkitekter vil ha ulike svar på hva de gjør når de modellerer, men her 
 
 ====  Finn interesseområdet og omfanget av modellen
 
-Det er sagt at alt henger sammen med alt, men skal man lage en modell er det viktig å klargjøre akkurat hva modellen skal gi en oversikt og innsikt i, og hvem som skal bruke modellen.
+Det er sagt at alt henger sammen med alt, men skal man lage en modell er det viktig å klargjøre akkurat hva modellen skal gi en oversikt over og innsikt i, og hvem som skal bruke modellen.
 
 ==== Finn mulige gjenbrukbare modeller
 
 Ikke gjør dobbeltarbeid, hvis du kan bruke ting du eller andre allerede har definert betyr det ikke bare mindre arbeid for deg som arkitekt, det betyr også mindre arbeid for de som skal omsette den konkrete modellen til en applikasjon. Gjenbruk av de samme basiskonseptene letter den gjennomgående forståelsen og sikrer at man beskriver de samme tingene på en ensartet måte.
 
-==== Finn de viktige objektstypene
+==== Finn de viktige objekttypene
 
 Også kalt klassene, tingene eller konseptene. Pek ut hva som er viktigst i modellen, og start med disse og bygg ut derifra.
 
-De viktige konseptene kjennetegnes ofte ved at ord som betegner konseptet går igjen i beskrivelsen av systemet. Les igjennom sentrale dokumenter som beskriver feltet og vurder viktigheten av alle substantiver.
+De viktige konseptene kjennetegnes ofte ved at ord som betegner konseptet går igjen i beskrivelsen av systemet. Les igjennom sentrale dokumenter som beskriver fagfeltet og vurder viktigheten av alle substantiver.
 
 I en konseptuell modell vil ofte de objektene som har flest tilknyttede relasjoner være de viktigste.
 
@@ -67,7 +69,7 @@ Noen konsepter er slik at det er en utdyping av et annet: loff er en type brød,
 
 ====  Definer egenskapene til objekttypene og beskriv tillatte verdier
 
-Det er her informasjonen kommer inn i modellen. For hver objektstype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier. F.eks. at en gitt egenskap er et heltall mellom 10 og 50.
+Det er her informasjonen kommer inn i modellen. For hver objekttype, finn de egenskapene som beskriver objektet nærmere og legg dem til i form av egenskaper. Identifiser om egenskapen utrykkes på en spesiell måte, er det et heltall, en streng, og har det noen spesifiserte minimum og maksimum verdier? F.eks. at en gitt egenskap er et heltall mellom 10 og 50.
 
 
 ====  Beskriv forhold mellom objekttypene
