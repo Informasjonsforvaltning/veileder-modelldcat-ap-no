@@ -27,7 +27,8 @@ Identifikatoren bør utformes i henhold til https://www.digdir.no/digitale-felle
 
 Det anbefales å bruke følgende mønster for URI til utgiver (`dct:publisher`) og produsent (`dct:creator`), der det siste leddet er organisasjonsnummeret:
 -----
-<enInfoModell> dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673> .
+<enInfoModell> a modelldcatno:InformationModel ;
+  dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673> .
 -----
 
 Når det er behov for å oppgi at «eieren» for en informasjonsmodell som ikke er den samme som utgiveren (`dct:publisher`), anbefales det å bruke produsent (`dct:creator`).
@@ -37,7 +38,8 @@ Når det er behov for å oppgi at «eieren» for en informasjonsmodell som ikke 
 Til dekningsområde (`dct:spatial`), anbefales det å bruke EU sine kontrollerte vokabularer https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent[Continent], https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country[Country],  og https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place[Place]. Eksemplet under (i RDF Turtle) viser bruk av Country-vokabularet for å oppgi Norge (NOR):
 
 -----
-<enInfoModell> dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> . # Norge
+<enInfoModell> a modelldcatno:InformationModel ;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> . # Norge
 -----
 
 Det anbefales å bruke Kartverket sine kontrollerte vokabularer for fylke  og kommune. Eksemplene under viser Oslo som fylke hhv. kommune.
@@ -54,5 +56,6 @@ Du kan finne fram til URIene https://data.geonorge.no/administrativeEnheter/nasj
 
 For lisens (`dct:license`) anbefales det å bruke EU sitt kontrollerte vokabular for lisens, https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence], hvis lisensen du bruker finnes på listen. I eksemplet under er det https://creativecommons.org/licenses/by/4.0/[CC BY v. 4.0] som er brukt.
 -----
-<enInfoModell> dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> .
+<enInfoModell> a modelldcatno:InformationModel ;
+  dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> .
 -----
