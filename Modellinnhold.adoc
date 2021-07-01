@@ -287,7 +287,7 @@ Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/exam
 En rotobjekttype representerer det overordnede objektet i en gruppe av objekter som er knyttet til hverandre i en hierarkisk struktur.
 *****
 
-.Eksmepel - Rotobjekttype
+.Eksempel - Rotobjekttype
 image::images/eksempelRotobjekttype.png[]
 
 Eksempelet viser bruk av rotobjekttype. Rotobjektet er her representert som en klasse med stereotype «Rotobjekttype».
