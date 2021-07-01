@@ -45,9 +45,11 @@ Til dekningsområde (`dct:spatial`), anbefales det å bruke EU sine kontrollerte
 Det anbefales å bruke Kartverket sine kontrollerte vokabularer for fylke  og kommune. Eksemplene under viser Oslo som fylke hhv. kommune.
 
 ----
-<mod1> dct:spatial <https://data.geonorge.no/administrativeEnheter/fylke/id/173159> . # Oslo som fylke
+<mod1> a modelldcatno:InformationModel ;
+  dct:spatial <https://data.geonorge.no/administrativeEnheter/fylke/id/173159> . # Oslo som fylke
 
-<mod2> dct:spatial <https://data.geonorge.no/administrativeEnheter/kommune/id/173018> . # Oslo som kommune
+<mod2> a modelldcatno:InformationModel ;
+  dct:spatial <https://data.geonorge.no/administrativeEnheter/kommune/id/173018> . # Oslo som kommune
 ----
 
 Du kan finne fram til URIene https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[her].
