@@ -69,7 +69,7 @@ Mapping til ModellDCAT-AP-NO:
 |===
 |*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
-|2|Attribute|Attributt (`modelldcatno: Attribute`)
+|2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Abstraction|Abstraksjon (`modelldcatno:Abstraction`)
 |4|Primitive|Enkeltype (`modelldcatno:SimpleType`)
 |5|Role|Rolle (`modelldcatno:Role`)
@@ -135,7 +135,7 @@ Mapping til ModellDCAT-AP-NO:
 |===
 |*Modellelement-/egenskapstype*|*UML-representasjon*|*ModellDCAT-AP-NO*
 |1|Class|Objekttype (`modelldcatno:ObjectType`)
-|2|Attribute|Attributt (`modelldcatno: Attribute`)
+|2|Attribute|Attributt (`modelldcatno:Attribute`)
 |3|Realization|Realisering (`modelldcatno:Realization`)
 |4|DataType|Datatype (`modelldcatno:Datatype`)
 |5|Primitive|Enkeltype (`modelldcatno:SimpleType`)
