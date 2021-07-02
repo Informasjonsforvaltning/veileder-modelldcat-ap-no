@@ -9,7 +9,7 @@ image::images/sammenheng.png[]
 [cols="20,80"]
 |===
 |*Nummerering*|*ModellDCAT-AP-NO*
-|1|Informasjonsmodell (`dct:InformationModel`)
+|1|Informasjonsmodell (`modeldcatno:InformationModel`)
 |2|Datasett (`dcat:Dataset`)
 |3|Datatjeneste (`dcat:DataService`)
 |4|Begrep (`skos:Concept`)
@@ -34,6 +34,6 @@ Datasett til informasjonsmodell:
 Datatjeneste til informasjonsmodell:
 
 ----
-<https://examples.com/infomoc/exdataservice> a dcat:Dataservice ;
+<https://examples.com/infomoc/exdataservice> a dcat:DataService ;
    dct:conformsTo <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod2> .
 ----
