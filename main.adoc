@@ -8,9 +8,11 @@ include::locale/attributes-nb.adoc[]
 ifdef::backend-pdf[:toc: macro]
 :toclevels: 3
 :sectanchors:
-:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image: image:images/Digdir.png[pdfwidth=30vw]
 
-image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+image::images/Digdir.png[width=50%, pdfwidth=30vw, link=https://digdir.no/]
+
+WARNING: #Veilederen støtter v.1.1 av spesifikasjonen, dvs. ikke ennå v.1.2#.
 
 include::./shared/download.adoc[]
 
