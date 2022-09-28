@@ -1,0 +1,69 @@
+name: build adocs and publish v1 to production
+
+on:
+  push:
+    branches:
+      - v1
+    paths:
+      - docs/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    name: asciidoctor build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: v1
+
+      - name: Build html
+        id: adocbuild
+        uses: avattathil/asciidoctor-action@master
+        with:
+          program: "asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc"
+
+      - name: Build pdf
+        id: adocbuild_pdf
+        uses: avattathil/asciidoctor-action@master
+        with:
+          program: "asciidoctor-pdf -D docs -o files/veileder-modelldcat-ap-no.pdf -a lang=nb docs/main.adoc"
+        continue-on-error: true
+
+      - name: Upload rdf to static-rdf-server
+        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.1.0
+        id: upload-rdf
+        with:
+          ontology-type: "guide"
+          ontology: "veileder-modelldcat-ap-no"
+          host: "https://fellesdatakatalog.digdir.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          files: |
+            docs/index.html text/html nb
+            docs/files/veileder-modelldcat-ap-no.pdf application/pdf nb files/veileder-modelldcat-ap-no.pdf
+            docs/images/adresse.png image/png nb images/adresse.png
+            docs/images/Begrepsreferanse.png image/png nb images/Begrepsreferanse.png
+            docs/images/Digdir.png image/png nb images/Digdir.png
+            docs/images/eksempelAbstraksjon.png image/png nb images/eksempelAbstraksjon.png
+            docs/images/eksempelAssosiasjon.png image/png nb images/eksempelAssosiasjon.png
+            docs/images/eksempelBegrensningsregel.png image/png nb images/eksempelBegrensningsregel.png
+            docs/images/eksempelEksternKodeliste.png image/png nb images/eksempelEksternKodeliste.png
+            docs/images/eksempelEnkelvalg.png image/png nb images/eksempelEnkelvalg.png
+            docs/images/eksempelFarger.png image/png nb images/eksempelFarger.png
+            docs/images/eksempelFlervalg.png image/png nb images/eksempelFlervalg.png
+            docs/images/eksempelKomposisjonOgSamling.png image/png nb images/eksempelKomposisjonOgSamling.png
+            docs/images/eksempelModul.png image/png nb images/eksempelModul.png
+            docs/images/eksempelNote.png image/png nb images/eksempelNote.png
+            docs/images/eksempelRealisering.png image/png nb images/eksempelRealisering.png
+            docs/images/eksempelRelasjonsegenskap.png image/png nb images/eksempelRelasjonsegenskap.png
+            docs/images/eksempelRotobjekttype.png image/png nb images/eksempelRotobjekttype.png
+            docs/images/eksempelTypedefinisjon.png image/png nb images/eksempelTypedefinisjon.png
+            docs/images/enEnkelModell.png image/png nb images/enEnkelModell.png
+            docs/images/ModellDCAT-AP-NO_Katalogdel.png image/png nb images/ModellDCAT-AP-NO_Katalogdel.png
+            docs/images/ModellDCAT-AP-NO_Modelldel.png image/png nb images/ModellDCAT-AP-NO_Modelldel.png
+            docs/images/sammenheng.png image/png nb images/sammenheng.png
+            docs/images/SkjemaA.png image/png nb images/SkjemaA.png
+            docs/images/SkyldnerKreditor.png image/png nb images/SkyldnerKreditor.png
+            docs/images/ting.png image/png nb images/ting.png
