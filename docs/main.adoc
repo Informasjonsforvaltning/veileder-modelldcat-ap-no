@@ -55,4 +55,4 @@ include::Akronymer.adoc[]
 include::Vedlegg_Infomodellering.adoc[]
 
 // statistikk:
-// include::./shared/stats.adoc[]
+include::./shared/analytics.adoc[]
