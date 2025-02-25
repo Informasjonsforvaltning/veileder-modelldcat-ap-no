@@ -54,5 +54,5 @@ include::Akronymer.adoc[]
 
 include::Vedlegg_Infomodellering.adoc[]
 
-// statistikk:
+// Analytics:
 include::./shared/analytics.adoc[]
