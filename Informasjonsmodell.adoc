@@ -5,7 +5,7 @@
 Med informasjonsmodell (`modelldcatno:InformationModel`) mener vi en formell beskrivelse av informasjonen en virksomhet trenger å motta eller selv produsere for å utføre sitt daglige virke. Vi legger til grunn en vid tolkning av begrepet informasjonsmodell. Den omfatter modeller på ulike abstraksjonsnivåer (som konseptuelle, logiske og fysiske modeller) og modeller som beskriver ulike aspekter ved informasjon (som felles- og anvendelsesmodeller).
 
 *****
-For ModellDCAT-AP-NO er det utarbeidet et https://data.norge.no/vocabulary/modelldcatno/modelldcatno.ttl[vokabular for klassifisering av modeller].
+For ModellDCAT-AP-NO er det utarbeidet et https://data.norge.no/vocabulary/information-model-type[vokabular for klassifisering av modeller].
 Dette er:
 
 * *Konseptuell modell* er en form for kvalitativ modell som beskriver de viktigste konseptene innenfor et fagdomene og sammenhengen mellom disse.

@@ -128,7 +128,7 @@ Realisering er et forhold mellom modellelementer og/eller egenskaper, der det en
 .Eksempel - Realisering
 image::images/eksempelRealisering.png[]
 
-Eksemplet viser hvordan man i https://www.kartverket.no/geodataarbeid/standardisering/sosi-standarder2/standarder-geografisk-informasjon[SOSI-standardene] for geografisk informasjon har definert SOSI-typer som en realisering av typer i https://www.geonorge.no/Geodataarbeid/inspire/[INSPIRE]. Her er ikke alle egenskapene fra standardene tatt med.
+Eksemplet viser hvordan man i https://www.geonorge.no/Geodataarbeid/standardisering/standarder-under-sosi-paraplyen/[SOSI-standardene] for geografisk informasjon har definert SOSI-typer som en realisering av typer i https://www.geonorge.no/Geodataarbeid/inspire/[INSPIRE]. Her er ikke alle egenskapene fra standardene tatt med.
 
 Mapping til ModellDCAT-AP-NO:
 
@@ -367,7 +367,7 @@ Ofte grupperes modellelementer ved at de får ulike farger i diagrammer. I Model
 .Eksempel - Modul (farger i diagrammer)
 image::images/eksempelFarger.png[]
 
-Eksemplet er hentet fra SSBs https://github.com/statisticsnorway/gsim-raml-schema[logiske datamodell] for statistikkinformasjon, som er basert på UNECE standard https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model[Generic Statistical Information Model] (GSIM). Egenskaper på objekttypene vises ikke.
+Eksemplet er hentet fra SSBs https://github.com/RupinderKaurSSB/gsim-raml-schema[logiske datamodell] for statistikkinformasjon, som er basert på UNECE standard https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model[Generic Statistical Information Model] (GSIM). Egenskaper på objekttypene vises ikke.
 
 Mapping til ModellDCAT-AP-NO:
 |===
