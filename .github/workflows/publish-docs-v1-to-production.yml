@@ -12,68 +12,46 @@ on:
   workflow_dispatch:
 
 jobs:
-  adoc_build:
-    runs-on: ubuntu-latest
-    name: asciidoctor build
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
-        with:
-          submodules: true
-          fetch-depth: 0
-          ref: v1
-
-      - name: Update submodules to latest main
-        run: |
-          git submodule foreach --recursive git fetch origin
-          git submodule foreach --recursive git checkout origin/main
-
-      - name: Build html
-        id: adocbuild
-        uses: docker://asciidoctor/docker-asciidoctor:1.106@sha256:6266e05784c2d8ece9d9fe5e593b12c3beebebbc467135fd6f4a56269c93cea3
-        with:
-          args: bash -c "asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc"
-
-      - name: Build pdf
-        id: adocbuild_pdf
-        uses: docker://asciidoctor/docker-asciidoctor:1.106@sha256:6266e05784c2d8ece9d9fe5e593b12c3beebebbc467135fd6f4a56269c93cea3
-        with:
-          args: bash -c "asciidoctor-pdf -D docs -o files/veileder-modelldcat-ap-no.pdf -a lang=nb docs/main.adoc"
-        continue-on-error: true
-
-      - name: Upload rdf to static-rdf-server
-        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@f9b41f11e07006762215dbd80a6e09b97834f93c  # v3.3.0
-        id: upload-rdf
-        with:
-          ontology-type: "guide"
-          ontology: "veileder-modelldcat-ap-no"
-          host: "https://fellesdatakatalog.digdir.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
-          files: |
-            docs/index.html text/html nb
-            docs/files/veileder-modelldcat-ap-no.pdf application/pdf nb files/veileder-modelldcat-ap-no.pdf
-            docs/images/adresse.png image/png nb images/adresse.png
-            docs/images/Begrepsreferanse.png image/png nb images/Begrepsreferanse.png
-            docs/images/Digdir.png image/png nb images/Digdir.png
-            docs/images/eksempelAbstraksjon.png image/png nb images/eksempelAbstraksjon.png
-            docs/images/eksempelAssosiasjon.png image/png nb images/eksempelAssosiasjon.png
-            docs/images/eksempelBegrensningsregel.png image/png nb images/eksempelBegrensningsregel.png
-            docs/images/eksempelEksternKodeliste.png image/png nb images/eksempelEksternKodeliste.png
-            docs/images/eksempelEnkelvalg.png image/png nb images/eksempelEnkelvalg.png
-            docs/images/eksempelFarger.png image/png nb images/eksempelFarger.png
-            docs/images/eksempelFlervalg.png image/png nb images/eksempelFlervalg.png
-            docs/images/eksempelKomposisjonOgSamling.png image/png nb images/eksempelKomposisjonOgSamling.png
-            docs/images/eksempelModul.png image/png nb images/eksempelModul.png
-            docs/images/eksempelNote.png image/png nb images/eksempelNote.png
-            docs/images/eksempelRealisering.png image/png nb images/eksempelRealisering.png
-            docs/images/eksempelRelasjonsegenskap.png image/png nb images/eksempelRelasjonsegenskap.png
-            docs/images/eksempelRotobjekttype.png image/png nb images/eksempelRotobjekttype.png
-            docs/images/eksempelTypedefinisjon.png image/png nb images/eksempelTypedefinisjon.png
-            docs/images/enEnkelModell.png image/png nb images/enEnkelModell.png
-            docs/images/ModellDCAT-AP-NO_Katalogdel.png image/png nb images/ModellDCAT-AP-NO_Katalogdel.png
-            docs/images/ModellDCAT-AP-NO_Modelldel.png image/png nb images/ModellDCAT-AP-NO_Modelldel.png
-            docs/images/sammenheng.png image/png nb images/sammenheng.png
-            docs/images/SkjemaA.png image/png nb images/SkjemaA.png
-            docs/images/SkyldnerKreditor.png image/png nb images/SkyldnerKreditor.png
-            docs/images/ting.png image/png nb images/ting.png
+  upload-files-to-production:
+    name: Upload guide to static-rdf-server
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/v1'
+    uses: Informasjonsforvaltning/workflows/.github/workflows/specification-upload-files.yaml@main
+    with:
+      ref: v1
+      program_html: |
+        asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc
+      program_pdf: |
+        asciidoctor-pdf -D docs -o files/veileder-modelldcat-ap-no.pdf -a lang=nb docs/main.adoc
+      program_pdf_continue_on_error: true
+      host: https://fellesdatakatalog.digdir.no
+      ontology: veileder-modelldcat-ap-no
+      ontology-type: guide
+      files: |
+        docs/index.html text/html nb
+        docs/files/veileder-modelldcat-ap-no.pdf application/pdf nb files/veileder-modelldcat-ap-no.pdf
+        docs/images/adresse.png image/png nb images/adresse.png
+        docs/images/Begrepsreferanse.png image/png nb images/Begrepsreferanse.png
+        docs/images/Digdir.png image/png nb images/Digdir.png
+        docs/images/eksempelAbstraksjon.png image/png nb images/eksempelAbstraksjon.png
+        docs/images/eksempelAssosiasjon.png image/png nb images/eksempelAssosiasjon.png
+        docs/images/eksempelBegrensningsregel.png image/png nb images/eksempelBegrensningsregel.png
+        docs/images/eksempelEksternKodeliste.png image/png nb images/eksempelEksternKodeliste.png
+        docs/images/eksempelEnkelvalg.png image/png nb images/eksempelEnkelvalg.png
+        docs/images/eksempelFarger.png image/png nb images/eksempelFarger.png
+        docs/images/eksempelFlervalg.png image/png nb images/eksempelFlervalg.png
+        docs/images/eksempelKomposisjonOgSamling.png image/png nb images/eksempelKomposisjonOgSamling.png
+        docs/images/eksempelModul.png image/png nb images/eksempelModul.png
+        docs/images/eksempelNote.png image/png nb images/eksempelNote.png
+        docs/images/eksempelRealisering.png image/png nb images/eksempelRealisering.png
+        docs/images/eksempelRelasjonsegenskap.png image/png nb images/eksempelRelasjonsegenskap.png
+        docs/images/eksempelRotobjekttype.png image/png nb images/eksempelRotobjekttype.png
+        docs/images/eksempelTypedefinisjon.png image/png nb images/eksempelTypedefinisjon.png
+        docs/images/enEnkelModell.png image/png nb images/enEnkelModell.png
+        docs/images/ModellDCAT-AP-NO_Katalogdel.png image/png nb images/ModellDCAT-AP-NO_Katalogdel.png
+        docs/images/ModellDCAT-AP-NO_Modelldel.png image/png nb images/ModellDCAT-AP-NO_Modelldel.png
+        docs/images/sammenheng.png image/png nb images/sammenheng.png
+        docs/images/SkjemaA.png image/png nb images/SkjemaA.png
+        docs/images/SkyldnerKreditor.png image/png nb images/SkyldnerKreditor.png
+        docs/images/ting.png image/png nb images/ting.png
+    secrets:
+      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
